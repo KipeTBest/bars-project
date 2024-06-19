@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
-import LoadJson from './LoadJson';
-import DisplayData from './DIsplayData';
-import AuthRoute from './AuthRoute';
+import LoadJson from './Components/DBComponents/LoadJson';
+import DisplayData from './Components/DBComponents/DIsplayData';
+import AuthRoute from './Components/UserComponents/AuthRoute';
 
 function App() {
     return (
