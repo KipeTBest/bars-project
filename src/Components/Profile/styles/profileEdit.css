@@ -1,0 +1,143 @@
+.profile-edit {
+    background: linear-gradient(to right, #0C2232, #246798);
+    margin: 261px 281px;
+}
+
+.profile-wrapper {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-size: 36px;
+    margin-top: 165px;
+}
+
+.profile-form {
+    position: relative;
+}
+
+.profile-form__user-data {
+    margin-left: 350px;
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-form__user-data > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-form__user-data label {
+    width: 190px;
+    height: 45px;
+    text-align: right;
+    margin-right: 31px;
+    font-size: 36px;
+}
+
+input, textarea {
+    width: 530px;
+    color: black;
+    font-size: 30px;
+    background-color: white;
+    border-radius: 20px;
+    outline: none;
+    padding: 10px;
+    transition: border 0.5s;
+    box-sizing: border-box;
+}
+
+textarea {
+    height: 200px;
+    resize: none; /* Запрещает изменение размера */
+}
+
+.label-about {
+    align-self: flex-start;
+    margin-bottom: 10px;
+}
+
+.profile-edit__about {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.profile-edit__save {
+    position: relative;
+    display: inline-block;
+
+    vertical-align: center;
+    text-align: center;
+
+    height: 80px;
+    width: 323px;
+
+    background-color: #0D2536;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: none;
+    transition: background-color 0.2s;
+    margin-bottom: 229px;
+}
+
+
+.profile-edit__save:hover {
+    opacity: 0.3;
+}
+
+.profile-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 127px;
+}
+
+.user-photo {
+    width: 325px;
+    height: 530px;
+    position: absolute;
+    top: 637px;
+    left: 400px;
+    border-radius: 30px;
+}
+
+.profile-edit__photo {
+    margin-top: -25px;
+    margin-bottom: 10px;
+    position: relative;
+    height: 80px;
+    width: 350px;
+}
+
+.profile-edit__photo-label {
+
+    position: relative;
+    display: inline-block;
+
+    vertical-align: center;
+    text-align: center;
+
+    background-color: #0D2536;
+
+    padding: 10px 10px;
+    box-sizing: border-box;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.profile-edit__photo input[type="file"] {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    display: block;
+    width: 0;
+    height: 0;
+}
+
+.profile-edit__photo input[type=file]:focus + span {
+    opacity: 0.3;
+}
+
+.profile-edit__photo:hover span {
+    opacity: 0.3;
+}
