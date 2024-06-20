@@ -4,8 +4,6 @@ import {NavLink, useNavigate } from "react-router-dom";
 import UserData from "./UserData";
 import HeaderProfile from "./HeaderProfile";
 
-
-import "../../resetStyle.css"
 import "./styles/userProfile.css"
 
 const UserProfile = () => {
