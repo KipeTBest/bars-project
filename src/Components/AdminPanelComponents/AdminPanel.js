@@ -1,5 +1,5 @@
 import './adminPanel.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const AdminPanel = () => {
     const [formData, setFormData] = useState({
@@ -7,9 +7,15 @@ const AdminPanel = () => {
         genre: '',
         director: '',
         description: '',
-        photo: null,
+        photo: null
     });
     const [previewSrc, setPreviewSrc] = useState('');
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        const storedData = JSON.parse(localStorage.getItem('data'));
+        setMovies(storedData.movies || []);
+    }, []);
 
     const handleChange = (e) => {
         const { name, value, files } = e.target;
@@ -34,27 +40,31 @@ const AdminPanel = () => {
             genres: formData.genre.split(',').map(item => item.trim()),
             directors: formData.director.split(',').map(item => item.trim()),
             description: formData.description,
-            photos: [previewSrc], // предполагаем, что одно фото
+            photos: [previewSrc]
         };
 
-        // Получение текущих данных из localStorage
         const storedData = JSON.parse(localStorage.getItem('data'));
 
-        // Добавление нового фильма
-        const updatedMovies = [...storedData.movies, newMovie];
+        const updatedMovies = Array.isArray(storedData.movies) ? [...storedData.movies, newMovie] : [newMovie];
 
-        // Сохранение обновленных данных в localStorage
         localStorage.setItem('data', JSON.stringify({ movies: updatedMovies }));
 
-        // Очистка формы
+        setMovies(updatedMovies);
+
         setFormData({
             title: '',
             genre: '',
             director: '',
             description: '',
-            photo: null,
+            photo: null
         });
         setPreviewSrc('');
+    };
+
+    const handleDelete = (index) => {
+        const updatedMovies = movies.filter((_, i) => i !== index);
+        localStorage.setItem('data', JSON.stringify({ movies: updatedMovies }));
+        setMovies(updatedMovies);
     };
 
     return (
@@ -96,6 +106,33 @@ const AdminPanel = () => {
                 </div>
                 <button type='submit' className='form-button'>Добавить</button>
             </form>
+            <div className='admin-panel__database'>
+                <p className='admin-panel__database__text'>База данных:</p>
+                <table>
+                    <thead>
+                    <tr>
+                        <th>Название:</th>
+                        <th>Жанр:</th>
+                        <th>Режиссер:</th>
+                        <th>Описание:</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {movies.map((movie, index) => (
+                        <tr key={index}>
+                            <td>{movie.title}</td>
+                            <td>{movie.genres.join(', ')}</td>
+                            <td>{movie.directors.join(', ')}</td>
+                            <td>{movie.description}</td>
+                            <td onClick={() => handleDelete(index)}>❌</td>
+                            <td>🖋</td>
+                        </tr>
+                    ))}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 };
