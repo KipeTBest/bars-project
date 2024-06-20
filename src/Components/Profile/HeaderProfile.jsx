@@ -1,14 +1,13 @@
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import React from "react";
-import "./styles/headerProfile.css"
-
+import "./styles/headerProfile.css";
 
 const HeaderProfile = () => {
 
-    const nonactiveLink = 'header-profile-list__link header-profile-list__link--non-active';
-    const normalLink = 'header-profile-list__link header-profile-list__link-active';
+    const nonactiveLink = 'header-profile__link header-profile__link--non-active';
+    const normalLink = 'header-profile__link header-profile__link--active';
 
-    return(
+    return (
         <div className="header-profile">
             <ul className="header-profile__list">
                 <li className="header-profile-list__item">
@@ -33,7 +32,7 @@ const HeaderProfile = () => {
                 </li>
             </ul>
         </div>
-)
+    );
 }
 
-export default HeaderProfile
+export default HeaderProfile;

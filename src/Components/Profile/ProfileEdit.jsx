@@ -1,6 +1,4 @@
-import Header from "../header/Header";
 import React, {useEffect, useState} from "react";
-import Footer from "../Footer/Footer";
 import HeaderProfile from "./HeaderProfile";
 import "./styles/profileEdit.css"
 
