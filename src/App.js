@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import LoadJson from './Components/DBComponents/LoadJson';
 import DisplayData from './Components/DBComponents/DIsplayData';
 import AuthRoute from './Components/UserComponents/AuthRoute';
-import AdminPanel from './Components/AdminPanel';
+import AdminPanel from './Components/AdminPanelComponents/AdminPanel';
 
 function App() {
     return (

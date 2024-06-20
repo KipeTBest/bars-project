@@ -1,0 +1,103 @@
+.admin-panel {
+    background: linear-gradient(0.15deg, #010609 42.15%, #183059 99.87%);
+}
+
+.test {
+    width: 100%;
+    height: 333px;
+    color: white;
+}
+
+.admin-panel__content {
+    color: #BCF8F7;
+    font-size: 64px;
+    line-height: 96px;
+    font-family: 'Jura', sans-serif;
+    font-weight: 400;
+    text-align: left;
+    margin-left: 111px;
+    margin-top: 333px;
+    text-shadow: 0 0 4px #3576F8;
+}
+
+.admin-panel__form-container {
+    text-align: left;
+    margin-left: 111px;
+    margin-top: 0; /*delete this, can't do like in mockup*/
+}
+
+.form-group {
+    color: #FFFFFF;
+    font-family: Russo One, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 54px;
+    margin-bottom: 20px; /*own*/
+}
+
+label {
+    width: 322px;
+    text-align: right;
+    padding-right: 20px; /*own*/
+}
+
+input[type=text],
+textarea {
+    width: 653px;
+    height: 65px;
+    background-color: #D9D9D9;
+}
+
+.form-row {
+    display: flex;
+    align-items: flex-end; /*own*/
+}
+
+.form-row .right input[type='file'] {
+    display: none;
+}
+
+.form-row .right label {
+    display: block;
+    width: 371px;
+    height: 67px;
+    background: linear-gradient(90deg, #1D283D 0%, #4D6DA3 51%);
+    color: #FFFFFF;
+    text-align: justify-all; /*TODO change text-align*/
+    font-family: Inter, sans-serif;
+    margin-left: 64px; /*0.5 miss*/
+    margin-top: 20px;
+}
+
+.form-row .right img {
+    display: block;
+    width: 239px;
+    height: 302px;
+    max-width: 239px;
+    max-height: 302px;
+    background-color: #D9D9D9;
+    margin-left: 129px; /*0.5 miss*/
+;
+}
+
+textarea {
+    width: 1151px;
+    height: 271px;
+    margin-right: 301px;
+    background-color: #D9D9D9;
+}
+
+button {
+    margin-left: 1102px; /*own*/
+    width: 371px;
+    height: 67px;
+    background: linear-gradient(90deg, #1D283D 0%, #4D6DA3 51%);
+    border: none;
+    outline: none;
+    font-family: Inter, sans-serif;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 54px;
+    text-align: center;
+    color: #FFFFFF;
+}
