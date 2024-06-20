@@ -35,7 +35,8 @@
     font-size: 36px;
 }
 
-input, textarea {
+.profile-form__user-data input,
+.profile-form__user-data textarea {
     width: 530px;
     color: black;
     font-size: 30px;
@@ -46,6 +47,7 @@ input, textarea {
     transition: border 0.5s;
     box-sizing: border-box;
 }
+
 
 textarea {
     height: 200px;
