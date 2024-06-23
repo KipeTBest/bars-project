@@ -1,9 +1,9 @@
 import { useState } from 'react';
-import './FirstSlider.css';
+import './ForTheRestSliders.css';
 
-function Slider({ data }) {
+function ForTheRestSliders({ data }) {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const slidesToShow = 5; 
+    const slidesToShow = 4
     const totalSlides = data.length;
 
     const goToPrevSlide = () => {
@@ -15,17 +15,21 @@ function Slider({ data }) {
     };
 
     return (
-        <div className="Slider-container" >
+        <div className="ForTheRestSliders">
             <div className="Slider">
                 <div className="slides-container" style={{ transform: `translateX(-${currentIndex * (100 / slidesToShow)}%)` }}>
                     
                     {data.map((el, index) => (
-                        <div key={el.id} className="slide" 
-                        style={{backgroundImage : `url(${el.img})`}}>
-                            <a href='#'>
-                                <div class="overlay"></div>
-                            </a>
-                        </div>
+                        <>
+                            <div key={index} className="slides" 
+                            style={{backgroundImage : `url(${el.photos[0]})`}}>
+                                <a href='#'>
+                                    <div class="overlay"></div> 
+                                </a>
+                                <span className='title'>{el.title}</span>
+                            </div>
+                        </>
+                        
                     ))}
                 </div>
                 <button className="prev" onClick={goToPrevSlide}>❮</button>
@@ -35,4 +39,4 @@ function Slider({ data }) {
     );
 }
 
-export default Slider;
+export default ForTheRestSliders;

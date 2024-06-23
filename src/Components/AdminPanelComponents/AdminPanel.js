@@ -69,7 +69,6 @@ const AdminPanel = () => {
 
     return (
         <div className='admin-panel'>
-            <div className='test'>Placeholder to make it look like the mockup. Will tweak a bit when the header appears</div>
             <div className='admin-panel__info'>
                 <div className='admin-panel__content'>
                     <p className='admin-panel__content__text'>Управление фильмами</p>
@@ -94,7 +93,7 @@ const AdminPanel = () => {
                     </div>
                     <div className='right'>
                         <div className='form-group'>
-                            <img id='photo-preview' src={previewSrc} alt='Preview' />
+                            <img id='photo-preview' src={previewSrc} alt='' />
                             <label htmlFor='photo'>Загрузить постер</label>
                             <input type='file' id='photo' name='photo' accept='image/*' onChange={handleChange} />
                         </div>
@@ -102,7 +101,7 @@ const AdminPanel = () => {
                 </div>
                 <div className='form-group'>
                     <label htmlFor='description' className='form-title'>Описание:</label>
-                    <textarea id='description' name='description' className='last-input' value={formData.description} onChange={handleChange}></textarea>
+                    <textarea id='description' name='description' className='description' value={formData.description} onChange={handleChange}></textarea>
                 </div>
                 <button type='submit' className='form-button'>Добавить</button>
             </form>
