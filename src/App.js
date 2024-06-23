@@ -4,6 +4,7 @@ import LoadJson from './Components/DBComponents/LoadJson';
 import DisplayData from './Components/DBComponents/DIsplayData';
 import AuthRoute from './Components/UserComponents/AuthRoute';
 import AdminPanel from './Components/AdminPanelComponents/AdminPanel';
+import MainPage from './Components/MainPageComponents/MainPage';
 
 function App() {
     return (
@@ -20,7 +21,7 @@ function App() {
                     </nav>
                 </header>
                 <Routes>
-                    <Route path="/"/>
+                    <Route path="/" element={<MainPage/>}/>
                     <Route path="/json" element={<AuthRoute element={<DisplayData />} />} />
                     <Route path="/adminPanel" element={<AdminPanel element={<DisplayData />} />} />
                 </Routes>

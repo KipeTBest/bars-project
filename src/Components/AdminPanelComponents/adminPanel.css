@@ -87,7 +87,7 @@ textarea {
     background-color: #D9D9D9;
 }
 
-button {
+.form-button {
     margin-left: 1102px; /*own*/
     width: 371px;
     height: 67px;

@@ -1,0 +1,21 @@
+.romantic {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 75px 0 96px 0;
+    background-color: black;
+}
+
+.info-romantic h1 {
+    color: #FFFF;
+    font-size: 4em;
+    font-family: 'Russo One', sans-serif;
+}
+.info-romantic span {
+    color: #FFFF;
+    font-size: 2em;
+    font-family: 'Russo One', sans-serif;
+}
+.info-romantic div {
+    margin: 16px 0 0 0;
+}
