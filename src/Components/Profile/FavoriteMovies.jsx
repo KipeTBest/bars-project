@@ -45,7 +45,7 @@ const FavoriteMovies = () => {
       <div className="favorite-movies__container">
         <HeaderProfile/>
         {favoriteMovies.length === 0 ? (
-            <p>Вы еще не добавили ни один фильм в избранное</p>
+            <p className="errorInFavorites">Вы еще не добавили ни один фильм в избранное</p>
         ) : (
             <>
               <div className="movies-grid">
