@@ -75,9 +75,9 @@
     z-index: 1;
 }
 
-p {
+.errorInFavorites {
     padding: 50px;
-    color: white;
+    background-color: white;
     font-size: 48px;
     font-family: 'Inter', sans-serif;
     display: flex;
