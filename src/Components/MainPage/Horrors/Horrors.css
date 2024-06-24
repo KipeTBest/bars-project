@@ -1,0 +1,22 @@
+.horrors {
+    display: flex;
+    justify-content: space-evenly;
+
+    padding: 75px 0 96px 0;
+    background: linear-gradient(90deg, #010508, #0E456E);
+}
+
+.info h1 {
+    color: #FFFF;
+    font-size: 4em;
+    margin-left: 34px;
+    font-family: 'Russo One', sans-serif;
+}
+.info span {
+    color: #FFFF;
+    font-size: 2em;
+    font-family: 'Russo One', sans-serif;
+}
+.info div{
+    margin: 16px 0 0 12%;
+}

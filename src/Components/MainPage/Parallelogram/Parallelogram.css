@@ -1,0 +1,60 @@
+.Parallelogram {
+    display: flex;
+    justify-content: center;
+    padding: 150px 0;
+}
+
+.figure {
+    width: 90%; 
+    max-width: 1476px;
+    transform: skew(-20deg);
+    background: #0C2232; 
+    position: relative; 
+    overflow: hidden; 
+}
+.figure span {
+    display: block;
+    text-align: center; 
+    transform: rotate(0deg) scale(1.001) skew(20deg) translate(0px);
+    
+}
+.figure p {
+    transform: rotate(0deg) scale(1.001) skew(20deg) translate(70px);
+}
+.figure p, .figure span {
+    color: #BCF8F7; 
+    font-size: 3vw; 
+    font-style: normal; 
+    font-family: 'Jura', sans-serif;
+    padding: 0 20px; 
+}
+
+@media (max-width: 1200px) {
+    .Parallelogram {
+        padding: 15vw 0; 
+    }
+    
+    .figure {
+        transform: skew(-15deg); 
+    }
+    
+    .figure p, .figure span {
+        font-size: 5vw; 
+    }
+}
+
+@media (max-width: 768px) {
+    .Parallelogram {
+        padding: 20vw 0; 
+    }
+    
+    .figure {
+        width: 90%; 
+        max-width: none; 
+        transform: none; 
+    }
+    
+    .figure p, .figure span {
+        font-size: 6vw; 
+    }
+}

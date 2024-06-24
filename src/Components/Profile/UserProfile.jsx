@@ -15,6 +15,7 @@ const UserProfile = () => {
         auth: false,
     });
 
+
     useEffect(() => {
         const storedUser = JSON.parse(localStorage.getItem('user'));
 
@@ -42,7 +43,7 @@ const UserProfile = () => {
 
     if(!user.auth){
         // TODO: Надо кидать пользователя на страницу логина или на главную страницу?
-        navigate("/");
+        navigate("/login");
     }
     return(
         <div className="user-profile">

@@ -13,6 +13,7 @@ import Footer from "./Components/Footer/Footer";
 
 import "./style.css"
 import "./resetStyle.css"
+import MainPage from './Components/MainPage/MainPage';
 
 function App() {
     return (
@@ -20,16 +21,16 @@ function App() {
             <div className="App">
                 <LoadJson />
                 <Header />
-                <header>
+                {/* <header>
                     <nav>
                         <ul>
                             <li><Link to="/">Главная</Link></li>
                             <li><Link to="/profile">Profile</Link></li>
                         </ul>
                     </nav>
-                </header>
+                </header> */}
                 <Routes>
-                    <Route path="/"/>
+                    <Route path="/" element={<MainPage/>}/>
                     <Route path="/adminPanel" element={<AuthRoute element={<AdminPanel />} />} />
                     <Route path="/profile" element={<UserProfile />} />
                     <Route path="/login" element={<Login />} />

@@ -1,0 +1,19 @@
+.Button {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1%;
+    align-items: center;
+    text-align: center;
+    background-color: #68FFFF;
+    color: black;
+    font-size: 2vw; 
+    font-family: 'Jura', sans-serif;
+    border-radius: 3vw; 
+    min-width: 10%;
+}
+
+.Button a {
+    padding: 3% 1.5%; 
+    text-decoration: none; 
+    cursor: pointer;
+}
