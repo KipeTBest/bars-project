@@ -1,5 +1,5 @@
 import React from 'react';
-import Like from "./../Header/img/Like.svg"
+import Heart from './img/heart.svg';
 
 const MovieContainer = ({ movie, removeFromFavorites }) => {
 
@@ -14,7 +14,7 @@ const MovieContainer = ({ movie, removeFromFavorites }) => {
             <button onClick={(e) => {
                 e.stopPropagation();
                 removeFromFavorites(movie.id);
-            }}><img src={Like} alt="Delete" />
+            }}><img src={Heart} alt="Delete" />
             </button>
             <span className="movie-info"> {movie.title}</span>
         </div>

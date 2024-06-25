@@ -3,6 +3,7 @@ import HeaderProfile from "./HeaderProfile";
 import React, { useState, useEffect } from 'react';
 import MovieContainer from "./MovieContainer";
 
+
 const FavoriteMovies = () => {
 
   const [favoriteMovies, setFavoriteMovies] = useState([]);
