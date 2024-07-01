@@ -1,0 +1,156 @@
+.movie{
+    position: relative;
+    z-index: 1;
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+.movie-details h1{
+    font-family: 'Jura', sans-serif;
+    font-size: 64px;
+    font-weight: 400;
+    line-height: 96px;
+    text-align: left;
+    color: #BCF8F7;
+    padding-left: 150px;
+    padding-top: 80px;
+}
+
+.movie-details h4 {
+    font-family: 'Jura', sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 60px;
+    text-align: left;
+    color: #FFFFFF;
+    padding-left: 150px;
+    padding-bottom: 30px;
+}
+
+.movie-container {
+    background: linear-gradient(to right, #0C2232, #246798);
+    margin-left: 150px;
+    margin-right: 194px;
+    height: 460px;
+    border-radius: 15px;
+
+    display: flex;
+}
+
+.movie-container img{
+    width: 332px;
+    height: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.movie-container h3{
+    padding: 30px;
+    font-family: 'Jura', sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #FFFFFF;
+}
+
+.movie-reviews{
+    padding-top: 60px;
+    font-family: 'Jura', sans-serif;
+    font-size: 64px;
+    text-align: left;
+    color: #BCF8F7;
+    padding-left: 150px;
+}
+
+.user-not-review {
+    font-family: 'Jura', sans-serif;
+    font-size: 48px;
+    text-align: left;
+    color: #BCF8F7;
+}
+
+.review-container {
+    display: flex;
+    margin-top: 50px;
+}
+
+.review-container img{
+    width: 157px;
+    height: 157px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.review-container__data{
+    margin-left: 30px;
+}
+
+.review-container__data h5{
+    font-size: 48px;
+}
+
+.review-container__data p{
+    background: linear-gradient(90deg, #BCF8F7 0%, #6F9291 100%);
+    border-radius: 30px;
+    padding: 5px 20px;
+    word-break: break-word;
+    color: black;
+    min-width: 650px;
+    font-size: 32px;
+    display: inline-block;
+    margin-right: 250px;
+}
+.movie-reviews__add {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 50px;
+    margin-bottom: 130px;
+}
+
+.movie-reviews__add textarea {
+    width: 1132px;
+    min-height: 70px;
+    max-height: 120px;
+    resize: none;
+    margin-bottom: 20px;
+    font-size: 32px;
+    padding: 10px;
+    border-radius: 30px;
+    background: #8CA6A6;
+    color: black;
+    margin-right: 220px;
+}
+
+.movie-reviews__add button {
+    width: 370px;
+    padding: 10px;
+    font-size: 36px;
+    border: none;
+    cursor: pointer;
+    margin-right: 220px;
+    background: linear-gradient(90deg, #1D283D 0%, #4D6DA3 51%);
+    color:white;
+    opacity: 1;
+}
+
+.movie-reviews__add button:hover {
+    opacity: 0.6;
+}
+
+.favorite-button{
+    padding-right: 30px;
+    padding-top: 10px;
+    width: 157px;
+    height: 157px;
+}
+
