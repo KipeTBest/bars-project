@@ -80,22 +80,22 @@ const AdminPanel = () => {
                     <div className='left'>
                         <div className='form-group'>
                             <label htmlFor='title' className='form-title'>Название:</label>
-                            <input type='text' id='title' name='title' value={formData.title} onChange={handleChange} />
+                            <input type='text' id='title' name='title' className="form-title" value={formData.title} onChange={handleChange} />
                         </div>
                         <div className='form-group'>
                             <label htmlFor='genre' className='form-title'>Жанр:</label>
-                            <input type='text' id='genre' name='genre' value={formData.genre} onChange={handleChange} />
+                            <input type='text' id='genre' name='genre' className="form-title" value={formData.genre} onChange={handleChange} />
                         </div>
                         <div className='form-group'>
                             <label htmlFor='director' className='form-title'>Режиссер:</label>
-                            <input type='text' id='director' name='director' value={formData.director} onChange={handleChange} />
+                            <input type='text' id='director' name='director' className="form-title" value={formData.director} onChange={handleChange} />
                         </div>
                     </div>
                     <div className='right'>
                         <div className='form-group'>
                             <img id='photo-preview' src={previewSrc} alt='' />
                             <label htmlFor='photo'>Загрузить постер</label>
-                            <input type='file' id='photo' name='photo' accept='image/*' onChange={handleChange} />
+                            <input type='file' id='photo' name='photo'  accept='image/*' onChange={handleChange} />
                         </div>
                     </div>
                 </div>

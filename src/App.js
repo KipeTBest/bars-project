@@ -14,6 +14,7 @@ import Footer from "./Components/Footer/Footer";
 import "./style.css"
 import "./resetStyle.css"
 import MainPage from './Components/MainPage/MainPage';
+import FilterMovies from './Components/FilterMovies/FilterMovies';
 
 function App() {
     return (
@@ -36,6 +37,7 @@ function App() {
                     <Route path="/login" element={<Login />} />
                     <Route path="/profile/edit" element={<ProfileEdit />} />
                     <Route path="/favorite" element={<FavoriteMovies/>}/>
+                    <Route path='/filterMovies' element={<FilterMovies/>}/>
                 </Routes>
                 <Footer/>
             </div>

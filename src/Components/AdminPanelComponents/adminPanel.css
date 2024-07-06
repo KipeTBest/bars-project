@@ -31,7 +31,7 @@ label {
     padding-right: 20px; /*own*/
 }
 
-input[type=text],
+.form-title,
 textarea {
     width: 653px;
     height: 65px;
