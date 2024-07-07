@@ -22,8 +22,8 @@ function Slider({ data }) {
                     {data.map((el, index) => (
                         <div key={index} className="slide" 
                         style={{backgroundImage : `url(${el.photos[0]})`}}>
-                            <a href='#'>
-                                <div class="overlay"></div>
+                            <a href={`/movies/${el.id}`}>
+                                <div className="overlay"></div>
                             </a>
                         </div>
                     ))}

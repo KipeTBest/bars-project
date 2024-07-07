@@ -1,0 +1,24 @@
+{
+  "reviews":[
+    {
+      "movieId": 1,
+      "userInfo": ["Иванов", "Иван", "https://i.pinimg.com/originals/58/72/74/587274fa96e6d1a1783915edc35f53b5.jpg"],
+      "reviewText": "Не смотри!"
+    },
+    {
+      "movieId": 1,
+      "userInfo": ["Иванов", "Кпристина", "https://i.pinimg.com/originals/58/72/74/587274fa96e6d1a1783915edc35f53b5.jpg"],
+      "reviewText": "Вроде классный фильм, вам стоит посмотреть."
+    },
+    {
+      "movieId": 1,
+      "userInfo": ["Смирнов", "Иван", "https://i.pinimg.com/originals/58/72/74/587274fa96e6d1a1783915edc35f53b5.jpg"],
+      "reviewText": "Вам нужно посмотреть. Вроде классный фильм, вам стоит посмотреть. Вроде классный фильм, вам стоит посмотреть. Вроде классный фильм, вам стоит посмотреть. Вроде классный фильм, вам стоит посмотреть."
+    },
+    {
+      "movieId": 4,
+      "userInfo": ["Смирнов", "Иван", "https://i.pinimg.com/originals/58/72/74/587274fa96e6d1a1783915edc35f53b5.jpg"],
+      "reviewText": "Interesting story but pacing was a bit slow. Interesting story but pacing was a bit slow.Interesting story but pacing was a bit slow.Interesting story but pacing was a bit slow"
+    }
+  ]
+}
