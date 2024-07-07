@@ -1,76 +1,50 @@
-    useEffect(() => {
-        const storedUser = JSON.parse(localStorage.getItem('user'));
-        if (storedUser && storedUser.auth) {
-            navigate('/profile');
-        }
-    }, [navigate]);
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import "./login.css"
+
+const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
 
     const handleLogin = (e) => {
         e.preventDefault();
-        const storedUser = JSON.parse(localStorage.getItem('user'));
+        const user = JSON.parse(localStorage.getItem('user'));
 
-        if (storedUser && storedUser.email === email && storedUser.password === password) {
-            storedUser.auth = true;
-            localStorage.setItem('user', JSON.stringify(storedUser));
-            console.log("User authorized");
+        if (user && user.email === email && user.password === password) {
+            user.auth = true;
+            localStorage.setItem('user', JSON.stringify(user));
             navigate('/profile');
         } else {
-            alert('Неверный email или пароль');
+            alert('Неправильный email или пароль');
         }
     };
 
-    const handleRegister = (e) => {
-        e.preventDefault();
-        navigate('/registration');
-    };
-    const handlePage = (e) => {
-      e.preventDefault();
-      navigate('/');
-    }
+
 
     return (
-        <div className="login">
-            <div className="login__nav">
-                <button onClick={handlePage}>
-                    <img src={Arrow} alt="arrow"/>
-                </button>
-                <h1>Войдите в систему</h1>
-            </div>
-
-            <form className="login__form" onSubmit={handleLogin}>
-                <div className="login__form__email">
-                    <label htmlFor="email">Почта</label>
-                    <input
-                        type="email"
-                        className="login__form__input"
-                        id="email"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="login__form__password">
-                    <label htmlFor="password">Пароль</label>
-                    <input
-                        type="password"
-                        className="login__form__input"
-                        id="password"
-                        placeholder="Password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
-                </div>
-                <div className="login__form__login">
-                    <button type="submit" className="login__form__login">
-                        Войти
-                    </button>
-                    <button type="button" className="login__form__reg" onClick={handleRegister}>
-                        Регистрация
-                    </button>
-                </div>
+        <div className="login-container">
+            <h2>Войдите в систему</h2>
+            <form onSubmit={handleLogin}>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Почта"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Пароль"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                <button type="submit">Вход</button>
             </form>
+            <button className="registration">Регистрация</button>
         </div>
     );
 };
