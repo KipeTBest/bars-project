@@ -102,12 +102,18 @@
 }
 
 
+
+.info-search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+}
 .delete-search {
   text-align: center;
-  margin-top: 30px;
-  padding: 0.5vw 0.2vw;
-  width: 13vw;
-  font-size: 1.5vw;
+  margin-left: 2vw;
+  padding: 0.5vw 0.3vw;
+  width: 10vw;
+  font-size: 1.2vw;
   font-family: 'Jura', sans-serif;
   cursor: pointer;
   display: flex;
