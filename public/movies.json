@@ -31,6 +31,16 @@
       ]
     },
     {
+      "title": "История игрушек",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Джон Лассетер"],
+      "description": "Приключения игрушек, оживших, когда их хозяин не смотрит.",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/ru/a/a6/Toy_Story_1995_Poster.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
       "title": "Зеленая миля ",
       "genres": ["драма", "фэнтези", "криминал"],
       "directors": ["Фрэнк Дарабонт"],
@@ -47,6 +57,16 @@
       "description": "Экранизация романа Джейн Остин о любви и предрассудках в английском обществе начала XIX века.",
       "photos": [
         "https://images.justwatch.com/poster/183744800/s718/pride-and-prejudice.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Король Лев",
+      "genres": ["анимация", "драма", "мюзикл"],
+      "directors": ["Роджер Аллерс", "Роб Минкофф"],
+      "description": "История о молодом льве, который должен стать королем после смерти своего отца.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/60aa1abc-b754-4817-ad9c-0bcda427a12b/1920x",
         "public/logo192.png"
       ]
     },
@@ -77,6 +97,26 @@
       "description": "Комедия о супружеской паре, которая обнаруживает, что они оба работают наемными убийцами, но у них нет понятия о профессии друг друга.",
       "photos": [
         "https://auctions.c.yimg.jp/images.auctions.yahoo.co.jp/image/dr000/auc0312/users/5/1/3/9/to_narita-img848x1200-1512474143emocuf30839.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Холодное сердце",
+      "genres": ["анимация", "мюзикл", "приключения"],
+      "directors": ["Крис Бак", "Дженнифер Ли"],
+      "description": "История о принцессе, которая стремится разморозить замерзшее сердце своей сестры.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-mpic/7547374/img_id704249226860710777.jpeg/900x1200",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Головоломка",
+      "genres": ["анимация", "драма", "фэнтези"],
+      "directors": ["Пит Доктер", "Рональдо Дель Кармен"],
+      "description": "Путешествие в уме мальчика, который сталкивается с внутренними конфликтами.",
+      "photos": [
+        "https://sun9-65.userapi.com/impf/c623821/v623821652/32cf9/Os-UxT3E47M.jpg?size=570x807&quality=96&sign=ea173f7d045eb01550c85c5027248472&c_uniq_tag=FNhxeD-_HwWtYH-ijKjbhED21SKigHIho8A7agmVdAc&type=album",
         "public/logo192.png"
       ]
     },
@@ -221,6 +261,36 @@
       ]
     },
     {
+      "title": "Призрак",
+      "genres": ["ужасы", "призраки"],
+      "directors": ["Джерри Чжи"],
+      "description": "Семья сталкивается с мистическим присутствием в своем доме.",
+      "photos": [
+        "https://www.timeout.ru/wp-content/uploads/kpposters/895519.jpg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Шесть чувств",
+      "genres": ["ужасы", "триллер"],
+      "directors": ["М. Найт Шьямалан"],
+      "description": "Ребенок видит мертвых людей и помогает им завершить недоделанные дела.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/d9347274-331a-4812-9f13-b56ca49f1fff/1920x",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Заклятие 2",
+      "genres": ["ужасы", "паранормальное"],
+      "directors": ["Джеймс Ван"],
+      "description": "Семья сталкивается с новыми демоническими угрозами после событий первой части.",
+      "photos": [
+        "https://avatars.mds.yandex.net/i?id=8ecb651f1c69056b39a6dff17687cd9a1acd5f8733ea9e82-5213980-images-thumbs&n=13",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
       "title": "Безумный Макс: Дорога ярости ",
       "genres": ["боевик", "приключения", "фантастика"],
       "directors": ["Джордж Миллер"],
@@ -301,6 +371,36 @@
       ]
     },
     {
+      "title": "Как приручить дракона",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Крис Сандерс", "Дин Деблуа"],
+      "description": "История о мальчике и его драконе, которые изменяют мир викингов.",
+      "photos": [
+        "https://life-secrets.ru/wp-content/uploads/2021/01/priruchit-drakona.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Тролли",
+      "genres": ["анимация", "мюзикл", "приключения"],
+      "directors": ["Уолт Дорн", "Майк Митчелл"],
+      "description": "История о тролях, чьи танцы и песни распространяют радость по всему миру.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-mpic/4742551/img_id3818395358140257763.jpeg/orig",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Кунг-фу Панда",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Марк Осборн", "Джон Стивенсон"],
+      "description": "История неуклюжего панды, который становится мастером кунг-фу.",
+      "photos": [
+        "https://xl.movieposterdb.com/12_03/2008/441773/xl_441773_a1496679.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
       "title": "Список Шиндлера",
       "genres": ["биография", "драма", "военный"],
       "directors": ["Стивен Спилберг"],
@@ -320,6 +420,7 @@
         "public/logo192.png"
       ]
     },
+
     {
       "title": "Сияние",
       "genres": ["драма", "ужасы"],
@@ -367,6 +468,46 @@
       "description": "Лёгкая комедия о студенте, который устраивает беспорядок с помощью шутизма.",
       "photos": [
         "https://www.krasdomkino.ru/system/uploads/film/cover/4305/yvyvayva.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Миньоны",
+      "genres": ["анимация", "комедия", "семейный"],
+      "directors": ["Пьер Коффин", "Кайл Балда"],
+      "description": "История о приключениях ваиа миньонов, путешествующих по миру в поисках нового злодея.",
+      "photos": [
+        "https://i1.wp.com/pbs.twimg.com/media/Ci7k0QqWEAAXxmn.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Мадагаскар",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Эрик Дарнелл", "Том МакГрат"],
+      "description": "История о зверях из зоопарка, попавших на остров Мадагаскар.",
+      "photos": [
+        "https://madagaskar-lordfilm.net/wp-content/uploads/2023/11/1611212-1594039.jpeg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Феи",
+      "genres": ["анимация", "приключения", "семейный"],
+      "directors": ["Гари Ридстром", "Дэвид Силверман"],
+      "description": "История о приключениях фей в волшебном мире.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1599028/ac91fbfe-6848-47f3-857f-f86454fbf1d2/1920x",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Рапунцель: Запутанная история",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Нэйтан Грено", "Байрон Ховард"],
+      "description": "История о принцессе Рапунцель, которая исследует внешний мир после того, как ее спасли от зловещей мачехи.",
+      "photos": [
+        "https://oboi-download.ru/files/wallpapers/3979/163288.webp",
         "public/logo192.png"
       ]
     },
@@ -437,6 +578,661 @@
       "description": "Этот фильм рассказывает историю обычного мужчины, который ищет счастье и удовлетворенность в американской мечте, только чтобы обнаружить, что внутреннее спокойствие и удовлетворенность не могут быть куплены.",
       "photos": [
         "https://ulpressa.ru/wp-content/uploads/old/2023/05/n2dznwczola.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Гарри Поттер и философский камень",
+      "genres": ["фэнтези", "приключения"],
+      "directors": ["Крис Коламбус"],
+      "description": "Мальчик-волшебник Гарри Поттер начинает свои приключения в Школе волшебства и волшебных исследований Хогвартс.",
+      "photos": [
+        "https://ucare.timepad.ru/c4023654-57f4-408d-95cd-035e08fbf84c/poster_event_2270055.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Хэллоуин",
+      "genres": ["ужасы", "слэшер"],
+      "directors": ["Джон Карпентер"],
+      "description": "Маньяк Майкл Майерс возвращается в родной город, чтобы убивать снова.",
+      "photos": [
+        "https://i.pinimg.com/736x/b3/c1/ed/b3c1ed6cfa76ec192d00e152148630a0.jpg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Адвокат дьявола",
+      "genres": ["ужасы", "триллер"],
+      "directors": ["Тейлор Хэкфорд"],
+      "description": "Адвокат сталкивается с дьявольскими заговорами и тайнами в Нью-Йорке.",
+      "photos": [
+        "https://i09.fotocdn.net/s213/e594db0deb332eab/public_pin_l/2825904783.jpg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Пятница 13-е",
+      "genres": ["ужасы", "слэшер"],
+      "directors": ["Шон С. Каннингем"],
+      "description": "Маньяк Джейсон Вурхиз возвращается, чтобы мстить за смерть своей матери.",
+      "photos": [
+        "https://m.media-amazon.com/images/M/MV5BZDcwM2E4OWMtOTQ0OC00NjZkLWEzMjYtOWJhYjYzMzRjMWRmXkEyXkFqcGdeQXVyMTA3MzQ4MTcw._V1_FMjpg_UX1000_.jpg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Заклятие",
+      "genres": ["ужасы", "паранормальное"],
+      "directors": ["Джеймс Ван"],
+      "description": "Семья сталкивается с демоническим присутствием в своем новом доме.",
+      "photos": [
+        "https://takeoverview.ru/images/file/4/6/0/fullhd_612241c88432f.jpg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Ночь живых мертвецов",
+      "genres": ["ужасы", "зомби"],
+      "directors": ["Джордж Ромеро"],
+      "description": "Группа людей борется за выживание в мире, зараженном зомби.",
+      "photos": [
+        "https://sun4-12.userapi.com/c857624/v857624690/e50ae/8yXG9hLHMKg.jpg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Псы войны",
+      "genres": ["ужасы", "триллер"],
+      "directors": ["Уэс Крэйвен"],
+      "description": "Медвежатники встречаются с безумным убийцей в изолированной обстановке.",
+      "photos": [
+        "https://fs.kinomania.ru/file/film_poster/f/40/f4019657a0c073ede70a1289e3583b2a.jpeg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Синистер",
+      "genres": ["ужасы", "триллер"],
+      "directors": ["Скотт Дерриксон"],
+      "description": "Писатель исследует серию убийств, связанных с необъяснимыми явлениями.",
+      "photos": [
+        "https://i.pinimg.com/736x/85/f2/e4/85f2e4b8fa0ccedaa66c12d86435d1be.jpg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Призрак",
+      "genres": ["ужасы", "призраки"],
+      "directors": ["Джерри Чжи"],
+      "description": "Семья сталкивается с мистическим присутствием в своем доме.",
+      "photos": [
+        "https://www.timeout.ru/wp-content/uploads/kpposters/895519.jpg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Чужие",
+      "genres": ["ужасы", "научная фантастика"],
+      "directors": ["Ридли Скотт"],
+      "description": "Команда космического корабля борется с ксеноморфом на чужой планете.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/4483445/90f76b41-98af-4485-b3b5-c103c2d496f7/1920x",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Шесть чувств",
+      "genres": ["ужасы", "триллер"],
+      "directors": ["М. Найт Шьямалан"],
+      "description": "Ребенок видит мертвых людей и помогает им завершить недоделанные дела.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/d9347274-331a-4812-9f13-b56ca49f1fff/1920x",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Тихое место",
+      "genres": ["ужасы", "триллер"],
+      "directors": ["Джон Красински"],
+      "description": "Семья выживает в мире, где звук может стать смертельной ловушкой.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1777765/43e1945c-38a8-4477-bf35-2095c36f9a22/orig",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "title": "Исходный код",
+      "genres": ["фантастика", "триллер"],
+      "directors": ["Дункан Джонс"],
+      "description": "Молодой программист оказывается в теле другого человека и узнает, что должен помешать террористическому акту, который может убить миллионы.",
+      "photos": [
+        "https://cdn1.ozone.ru/s3/multimedia-w/6815136020.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Леон",
+      "genres": ["боевик", "драма"],
+      "directors": ["Люк Бессон"],
+      "description": "Профессиональный убийца Леон становится защитником 12-летней девочки Матильды, желающей отомстить за убийство своей семьи.",
+      "photos": [
+        "https://avatars.dzeninfra.ru/get-zen_doc/1592767/pub_64e35bca7a2b0a52f377ac34_64e35f67a5f0c931a9363e9d/scale_1200",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Гадкий я",
+      "genres": ["анимация", "комедия", "семейный"],
+      "directors": ["Крис Рено", "Пьер Коффин"],
+      "description": "История о гениальном преступнике, который изменяет свою жизнь после встречи с тремя сиротами.",
+      "photos": [
+        "https://i1.wp.com/a2.mzstatic.com/us/r30/Video/v4/04/ed/8d/04ed8d9b-41fe-74b6-8aa4-61acd8fc068b/02377_MLPE_RU_DM_1400x2100.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Иван Васильевич меняет профессию",
+      "genres": ["комедия", "фантастика"],
+      "directors": ["Леонид Гайдай"],
+      "description": "Советский инженер случайно отправляется в прошлое и меняет местами советского царя и обычного московского жильца.",
+      "photos": [
+        "https://filmofond.ru/uploadedFiles/eshopimages/big/big.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Пираты Карибского моря: Проклятие Черной жемчужины",
+      "genres": ["приключения", "фэнтези", "боевик"],
+      "directors": ["Гор Вербински"],
+      "description": "Капитан Джек Воробей вступает в битву с проклятием и пиратами, чтобы спасти свою жизнь и возвращенную любовь.",
+      "photos": [
+        "https://i.pinimg.com/736x/bc/8a/4f/bc8a4f381823177b3a05d0400499ba39.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Шерлок Холмс",
+      "genres": ["боевик", "детектив"],
+      "directors": ["Гай Ричи"],
+      "description": "Интеллектуальный детектив Шерлок Холмс и его верный друг Ватсон расследуют сложные преступления в Лондоне.",
+      "photos": [
+        "https://img.moviesrankings.com/t/p/w1280/3NFWINCP0Ej8gWNbzKI72AImAg7.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Терминатор 2: Судный день",
+      "genres": ["фантастика", "боевик"],
+      "directors": ["Джеймс Кэмерон"],
+      "description": "Убийца-киборг из будущего и его защитница Сара Коннор сражаются с новым терминатором, чтобы защитить будущего человечества.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/afbfa10c-f7d4-4bf6-8361-b5243798bbf4/1920x",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Форсаж 5",
+      "genres": ["боевик", "триллер"],
+      "directors": ["Джастин Лин"],
+      "description": "Группа международных грабителей планирует невозможное – ограбление Бразильского банка под защитой коррумпированных федеральных агентов.",
+      "photos": [
+        "https://i.pinimg.com/originals/92/68/bc/9268bcb37eee04a547d38485a5a29d30.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Достучаться до небес",
+      "genres": ["комедия", "драма"],
+      "directors": ["Лоренцо Джиллармо"],
+      "description": "Трое друзей из маленькой деревни отправляются в Москву, чтобы изменить свою жизнь и встретить своих звезд.",
+      "photos": [
+        "https://kzngo.ru/images/movie/11a82ce3c04d3e1_original.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Мальчишник в Вегасе",
+      "genres": ["комедия"],
+      "directors": ["Тодд Филлипс"],
+      "description": "Четверо друзей устраивают безумный мальчишник в Лас-Вегасе, который оказывается далеко не таким, как планировался.",
+      "photos": [
+        "https://images.justwatch.com/poster/8730490/s718",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Джентльмены",
+      "genres": ["боевик", "комедия"],
+      "directors": ["Гай Ричи"],
+      "description": "Американский криминальный босс в Лондоне начинает войну с конкурентами, желающими захватить его империю.",
+      "photos": [
+        "https://papik.pro/grafic/uploads/posts/2023-03/1680174230_papik-pro-p-dzhentlmeni-poster-13.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Бойцовский клуб",
+      "genres": ["драма"],
+      "directors": ["Дэвид Финчер"],
+      "description": "Безымянный главный герой и эксцентричный продавец мыла создают подпольный бойцовский клуб, который быстро выходит из-под контроля.",
+      "photos": [
+        "https://steamuserimages-a.akamaihd.net/ugc/257085147027977356/764A0473B26A12994398D30E5AD04217D502CDB4/",
+        "public/logo192.png"
+      ]
+    }, {
+      "title": "Темный рыцарь: Возрождение легенды",
+      "genres": ["боевик", "триллер"],
+      "directors": ["Кристофер Нолан"],
+      "description": "Бэтмен возвращается в Готэм, чтобы сразиться с бандитами и восстановить свой репутацию, пока зловещий Бэйн не приходит на смену.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/8c7943c8-e0b8-435a-bca3-35e4bf0b632e/1920x",
+        "public/logo192.png"
+      ]
+    },{
+      "title": "Тайна Коко",
+      "genres": ["анимация", "фэнтези", "мюзикл"],
+      "directors": ["Ли Анкрич", "Эдриан Молина"],
+      "description": "Мальчик Мигель отправляется в Страну мертвых, чтобы разгадать тайну своего рода и стать музыкальной звездой.",
+      "photos": [
+        "https://cdn.ambookvo.ru/wa-data/public/shop/products/50/55/105550/images/113578/113578.750x0.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Вверх",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Пит Доктер", "Боб Петерсон"],
+      "description": "История о старике, который отправляется в приключение вместе с воздушным шаром.",
+      "photos": [
+        "https://m.media-amazon.com/images/M/MV5BZWVmNmY5NGQtMDQ4Ny00NzI0LTkzNmItYTJlNDI1MWU2NzU4XkEyXkFqcGdeQXVyMTYwODUzMDUw._V1_QL75_UY311_CR8",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Зверополис",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Байрон Ховард", "Рич Мур"],
+      "description": "История о мире, где живут животные, старающиеся ужиться вместе.",
+      "photos": [
+        "https://trueposters.ru/pictures/product/big/8441_big.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Моана",
+      "genres": ["анимация", "приключения", "мюзикл"],
+      "directors": ["Рон Клементс", "Джон Маскер"],
+      "description": "История о девушке, которая отправляется в путешествие по океану, чтобы спасти свой народ.",
+      "photos": [
+        "https://i.pinimg.com/736x/71/2e/e0/712ee030cda877630a047beb441cf176.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Храбрая сердцем",
+      "genres": ["анимация", "приключения", "семейный"],
+      "directors": ["Бренда Чэпмен", "Марк Эндрюс"],
+      "description": "История о молодой принцессе, которая становится лучшим лучником в королевстве.",
+      "photos": [
+        "https://oboi.cc/files/img/pics/kartinki-iz-filma-khrabroe-serdtse/kartinki-iz-filma-khrabroe-serdtse-75.webp",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Малышка на миллион",
+      "genres": ["комедия", "драма"],
+      "directors": ["Гай Ричи"],
+      "description": "Девушка из убогой лондонской части становится принцессой, когда она находит огромный алмаз, пропавший из королевской короны.",
+      "photos": [
+        "https://www.kino-teatr.ru/movie/posters/big/1/26581.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Джентльмены удачи",
+      "genres": ["комедия", "криминал"],
+      "directors": ["Александр Серый"],
+      "description": "Три московских торговца решают стать богатыми и устроить налет на гараж китайского бизнесмена.",
+      "photos": [
+        "https://dom-veterany.tmb.socinfo.ru/media/2023/12/13/1336771053/IMG_7337.jpeg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Полицейский с Рублевки. Новогодний беспредел",
+      "genres": ["комедия", "криминал"],
+      "directors": ["Сарик Андреасян"],
+      "description": "Бандиты похищают заместителя губернатора, а полиция становится вечерними участниками событий.",
+      "photos": [
+        "https://images.justwatch.com/poster/170383751/s718/politseiskii-s-rubliovki-novogodnii-bespredel-2.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Список Шиндлера",
+      "genres": ["драма", "биография", "военный"],
+      "directors": ["Стивен Спилберг"],
+      "description": "История Оскара Шиндлера, члена НСДАП, который спас тысячи евреев во время Холокоста.",
+      "photos": [
+        "https://i.pinimg.com/736x/2a/39/56/2a3956d9a4911326ec18e378b8263e3d.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Властелин колец: Братство кольца",
+      "genres": ["фэнтези", "приключения"],
+      "directors": ["Питер Джексон"],
+      "description": "Фродо Бэггинс отправляется в опасное путешествие, чтобы уничтожить Кольцо Всевластия и остановить злого Саурона.",
+      "photos": [
+        "https://sun9-9.userapi.com/impg/B7EIiBIjB9dy32DibMcCHQEB0j1SM8H5CKsIBg/D84aVZ1GsX8.jpg?size=720x1080&quality=96&sign=791ca16b3277b7497f3061d30340741e&c_uniq_tag=bLwdoAERB23sx32SejJbRfggt8EtZpOT6aMFhWyxtk4&type=album",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Кролик Питер",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Уилл Глак", "Крис МакКэй"],
+      "description": "История о шаловливом кролике и его друзьях, которые пытаются вырваться из неприятностей.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-mpic/11375994/2a0000018b8edb617266971d53386eda65f7/orig",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Монстры на каникулах",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Генди Тартаковски"],
+      "description": "История о монстрах, которые пытаются скрыть свою настоящую природу в обществе людей.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/a3820209-2e59-4fa3-8429-3d1f39a0691d/1920x",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Ральф против интернета",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Фил Джонстон", "Рич Мур"],
+      "description": "История о Видеогеймовой галактике, которая исследует Интернет в поисках редкой части.",
+      "photos": [
+        "https://cdn.eksmo.ru/v2/ITD000000000896615/COVER/cover1__w820.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Остров проклятых",
+      "genres": ["драма", "триллер"],
+      "directors": ["Мартин Скорсезе"],
+      "description": "После того как федеральный маршал прибывает на отдаленный остров-приют для психически больных преступников, он начинает сомневаться в истории, которую ему рассказали об одном из пациентов.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1946459/332dd2eb-8e90-40f3-beae-4032ee931e27/1920x",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "ВАЛЛ·И",
+      "genres": ["анимация", "фантастика", "приключения"],
+      "directors": ["Эндрю Стэнтон"],
+      "description": "В будущем, где Земля покрыта мусором, робот-уборщик ВАЛЛ·И встречает современного робота EVE и отправляется в космическое приключение, чтобы спасти человечество.",
+      "photos": [
+        "https://i10.fotocdn.net/s205/3fbd7a89646e9655/public_pin_l/2350551894.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Бегущий по лезвию 2049",
+      "genres": ["фантастика", "драма"],
+      "directors": ["Дени Вильнёв"],
+      "description": "Офицер полиции Кай продолжает поиски Рика Декарда, бывшего летчика, который исчез 30 лет назад.",
+      "photos": [
+        "https://media.kg-portal.ru/movies/b/bladerunner2/posters/bladerunner2_21.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Аватар",
+      "genres": ["фантастика", "приключения"],
+      "directors": ["Джеймс Кэмерон"],
+      "description": "На планете Пандора корпорация землян и инопланетные народы вступают в конфликт из-за редкого минерала, который может изменить исход войны.",
+      "photos": [
+        "https://bizlida.by/media/afisha/e8/71/e871497d726fb31788d3b1ef157b365a.jpeg",
+        "public/logo192.png"
+      ]
+    },{
+      "title": "Мстители",
+      "genres": ["боевик", "приключения", "фантастика"],
+      "directors": ["Джосс Уидон"],
+      "description": "Супергерои объединяются, чтобы защитить Землю от могущественного врага.",
+      "photos": [
+        "https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_65a3eaf0964c935c81ab8aa6_65a3f007419f465664c5a6c0/scale_1200",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Помни",
+      "genres": ["драма", "научная фантастика", "триллер"],
+      "directors": ["Ари Фолман"],
+      "description": "Молодой мужчина пытается восстановить воспоминания о том, как его отец преследовался войной в Ливане.",
+      "photos": [
+        "https://i.pinimg.com/originals/95/54/8c/95548ca94f1343e0a05d62204225f1e2.jpg",
+        "public/logo192.png"
+      ]
+    },{
+      "title": "Отель Гранд Будапешт",
+      "genres": ["комедия", "драма"],
+      "directors": ["Уэс Андерсон"],
+      "description": "История об отеле и его необычных обитателях в период политических потрясений в Европе.",
+      "photos": [
+        "https://upload.wikimedia.org/wikipedia/uk/b/bd/Hotel_Grand_Budapesht.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Прибытие",
+      "genres": ["драма", "мистика", "научная фантастика"],
+      "directors": ["Дени Вильнёв"],
+      "description": "Лингвистика пытается установить связь с инопланетянами, прибывшими на Землю.",
+      "photos": [
+        "https://cdn1.ozone.ru/s3/multimedia-4/6361951600.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Мстители: Финал",
+      "genres": ["боевик", "приключения", "фантастика"],
+      "directors": ["Антони Руссо", "Джо Руссо"],
+      "description": "Мстители объединяются, чтобы победить Таноса и восстановить порядок во вселенной.",
+      "photos": [
+        "https://oboi.cc/files/img/pictures/mstiteli-final-kartinki/mstiteli-final-kartinki-17.webp",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Джокер",
+      "genres": ["драма", "триллер", "криминал"],
+      "directors": ["Тодд Филлипс"],
+      "description": "История происхождения одного из самых известных злодеев в мире комиксов.",
+      "photos": [
+        "https://i.pinimg.com/originals/73/c0/5a/73c05a54a87b39a5107e5ca2d5110cdd.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Хранители",
+      "genres": ["драма", "фантастика"],
+      "directors": ["Зак Снайдер"],
+      "description": "Группа бывших супергероев возвращается, чтобы расследовать заговор, направленный на уничтожение их коллег.",
+      "photos": [
+        "https://images.boosty.to/image/af5dbc35-24ee-419d-a2cd-c89f805ef25d?change_time=1674198849",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Джанго освобожденный",
+      "genres": ["драма", "вестерн"],
+      "directors": ["Квентин Тарантино"],
+      "description": "Бывший раб берет на себя месть против жестоких владельцев рабов в Джанго-державе.",
+      "photos": [
+        "https://i.pinimg.com/originals/b5/af/96/b5af964c0d4afe557a35075501bdddd1.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Мадмакс: Дорога ярости",
+      "genres": ["боевик", "приключения", "фантастика"],
+      "directors": ["Джордж Миллер"],
+      "description": "В мире, опустошенном войной, один человек борется за выживание в бесконечной погоне.",
+      "photos": [
+        "https://i.pinimg.com/originals/45/36/e2/4536e2283a205bb13e98dafaaf951fdd.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Парк Юрского периода",
+      "genres": ["боевик", "приключения", "фантастика"],
+      "directors": ["Колин Треворроу"],
+      "description": "Джон Хэммонд создает парк с динозаврами, которые сбегают и начинают атаковать посетителей.",
+      "photos": [
+        "https://i.pinimg.com/736x/19/9d/62/199d62bd3ff9af02aaa5bce3a42f5483.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Гарри Поттер и Дары Смерти: Часть 2",
+      "genres": ["приключения", "фэнтези"],
+      "directors": ["Дэвид Йейтс"],
+      "description": "Гарри Поттер сражается с Темным Лордом в итоговой битве между добром и злом.",
+      "photos": [
+        "https://oboi-download.ru/files/wallpapers/3907/160022.webp",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Человек-паук: Возвращение домой",
+      "genres": ["боевик", "приключения", "фантастика"],
+      "directors": ["Джон Уоттс"],
+      "description": "Питер Паркер пытается сбалансировать свою жизнь как обычный подросток и как Человек-паук.",
+      "photos": [
+        "https://www.strangearts.ru/sites/default/files/movies/catalog/images/chelovek-pauk_vozvrashchenie_domoy_2017.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Мстители: Эра Альтрона",
+      "genres": ["боевик", "приключения", "фантастика"],
+      "directors": ["Джосс Уидон"],
+      "description": "Мстители объединяются снова, чтобы сразиться с новой угрозой в виде ИИ, созданного Тони Старком.",
+      "photos": [
+        "https://gfort.ru/_ld/85/07114194.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Хоббит: Нежданное путешествие",
+      "genres": ["приключения", "фэнтези"],
+      "directors": ["Питер Джексон"],
+      "description": "Бильбо Бэггинс присоединяется к группе гномов, чтобы вернуть потерянное королевство.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1600647/1e613389-a5eb-476b-babe-2697bdb6777c/1920x",
+        "public/logo192.png"
+      ]
+    },{
+      "title": "Волк с Уолл-стрит",
+      "genres": ["биография", "комедия", "драма"],
+      "directors": ["Мартин Скорсезе"],
+      "description": "Финансовый мошенник просматривает жизнь богатства и власти.",
+      "photos": [
+        "https://avatars.dzeninfra.ru/get-zen_doc/10148732/pub_64c2b4c4b3d8da19fd99fff4_64c2b4e893970f3a150ef6ae/scale_1200",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Лунный свет",
+      "genres": ["драма"],
+      "directors": ["Барри Дженкинс"],
+      "description": "История о росте парня, взрослеющем в квартале Майами.",
+      "photos": [
+        "https://ih1.redbubble.net/image.1053121119.1050/flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Лего Фильм",
+      "genres": ["анимация", "приключения", "комедия"],
+      "directors": ["Фил Лорд", "Крис Миллер"],
+      "description": "Обычный Лего человек случайно оказывается выбран на спасение мира.",
+      "photos": [
+        "https://oboi.cc/files/img/pics/lego-film-2-kartinki/lego-film-2-kartinki-35.webp",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Гравитация",
+      "genres": ["драма", "научная фантастика", "триллер"],
+      "directors": ["Альфонсо Куарон"],
+      "description": "Двое астронавтов борются за выживание после катастрофы на орбите Земли.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/0fd3504c-71ed-400f-9430-8a19f0ed7b11/1920x",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Человек-паук: Через вселенные",
+      "genres": ["анимация", "боевик", "приключения"],
+      "directors": ["Питер Рэмси", "Боб Персичетти"],
+      "description": "Подросток из Бруклина обнаруживает параллельный мир, где существует несколько Человек-пауков.",
+      "photos": [
+        "https://i.pinimg.com/736x/91/79/09/917909ec0ccd2a5609de77a075cb96e1.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Мстители: Война бесконечности",
+      "genres": ["боевик", "приключения", "фантастика"],
+      "directors": ["Антони Руссо", "Джо Руссо"],
+      "description": "Мстители и их союзники должны быть готовы пожертвовать все в своем убежище, чтобы победить могущественного Таноса.",
+      "photos": [
+        "https://cdn1.ozone.ru/multimedia/1024224252.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Черная Пантера",
+      "genres": ["боевик", "приключения", "фантастика"],
+      "directors": ["Райан Куглер"],
+      "description": "Т'Чалла, наследник скрытой, но продвинутой страны Ваканды, должен защитить свое королевство от внутренних и внешних угроз.",
+      "photos": [
+        "https://i.pinimg.com/736x/c0/35/3b/c0353b3991f39e063f95f99c0b53192d.jpg",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Звездные войны: Пробуждение Силы",
+      "genres": ["боевик", "приключения", "фантастика"],
+      "directors": ["Джей Джей Абрамс"],
+      "description": "Новая надежда во вселенной Звездных Войн начинается с появления силы нового поколения.",
+      "photos": [
+        "https://avatars.mds.yandex.net/get-kinopoisk-image/1773646/653982e7-1962-4099-9fb0-3958cc0ab46d/1920x",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Ирландец",
+      "genres": ["биография", "криминал", "драма"],
+      "directors": ["Мартин Скорсезе"],
+      "description": "Шеф мафии захватывает важные события в жизни организованной преступности в XX веке.",
+      "photos": [
+        "https://avatars.dzeninfra.ru/get-zen_doc/4453741/pub_60b3a8a2bf8e387a92e2b5ba_60b3a8fe3204ed61022e6c45/scale_1200",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "title": "Хоббит: Пустошь Смауга",
+      "genres": ["приключения", "фэнтези"],
+      "directors": ["Питер Джексон"],
+      "description": "Бильбо Бэггинс присоединяется к группе гномов, чтобы вернуть потерянное королевство.",
+      "photos": [
+        "https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2016/11/hobbit-desolacion-smaug.jpg?tf=3840x",
         "public/logo192.png"
       ]
     }
