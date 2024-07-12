@@ -1,23 +1,22 @@
-/* Основные стили для общего контейнера футтера */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background-color: black;
     color: white;
-    padding: 40px 20px;
+    padding: 40px 44px;
     font-family: 'Inter', sans-serif;
     font-size: 20px;
 }
 
 .footer__about {
     flex: 1;
-    max-width: 500px;
-    margin-right: 800px;
+    max-width: 400px;
+    margin-right: auto;
 }
 
 .footer__about a {
-    font-size: 50px;
+    font-size: 48px;
     color: #BCF8F7;
 }
 
@@ -27,25 +26,23 @@
     color: #BCF8F7;
 }
 
-
-.footer__contact {
+.footer__contact, .footer__pages {
     flex: 1;
+    max-width: 300px;
+    margin-left: 40px;
 }
 
-.footer__contact li {
+.footer__contact ul, .footer__pages ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer__contact li, .footer__pages li {
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.footer__pages {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex: 1;
-}
-
 .footer__pages a {
     color: white;
-    display: block;
-    margin-bottom: 20px;
+    text-decoration: none;
 }
