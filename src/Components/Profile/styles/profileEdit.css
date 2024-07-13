@@ -8,6 +8,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 36px;
     margin-top: 165px;
+    display: inline-block;
 }
 
 .profile-form {
@@ -15,7 +16,7 @@
 }
 
 .profile-form__user-data {
-    margin-left: 350px;
+    margin-left: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -74,6 +75,8 @@ textarea {
     height: 80px;
     width: 323px;
 
+    margin-top: 10px;
+
     background-color: #0D2536;
     padding: 10px 10px;
     box-sizing: border-box;
@@ -104,8 +107,7 @@ textarea {
 }
 
 .profile-edit__photo {
-    margin-top: -25px;
-    margin-bottom: 10px;
+    display: flex;
     position: relative;
     height: 80px;
     width: 350px;
@@ -142,4 +144,22 @@ textarea {
 
 .profile-edit__photo:hover span {
     opacity: 0.3;
+}
+
+.error-messages {
+    margin-left: 100px;
+    display: inline-block;
+    color: red;
+    font-size: 25px;
+    list-style: none;
+}
+
+.error-message {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.profile-wrapper__btn{
+    margin-left: 90px;
+    display: inline-block;
 }

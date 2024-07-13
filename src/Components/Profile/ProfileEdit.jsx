@@ -1,6 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import HeaderProfile from "./HeaderProfile";
-import "./styles/profileEdit.css"
+import "./styles/profileEdit.css";
 
 const ProfileEdit = () => {
     const [user, setUser] = useState({
@@ -11,6 +11,7 @@ const ProfileEdit = () => {
         about: '',
         photo: ''
     });
+    const [errors, setErrors] = useState({});
 
     useEffect(() => {
         const storedUser = JSON.parse(localStorage.getItem('user'));
@@ -33,11 +34,30 @@ const ProfileEdit = () => {
             ...prevUser,
             [name]: value,
         }));
+        setErrors((prevErrors) => ({
+            ...prevErrors,
+            [name]: ''
+        }));
+    };
+
+    const validateFields = () => {
+        const newErrors = {};
+        if (!user.lastName) newErrors.lastName = 'Поле Фамилия обязательно для заполнения';
+        if (!user.firstName) newErrors.firstName = 'Поле Имя обязательно для заполнения';
+        if (!user.email) newErrors.email = 'Поле Почта обязательно для заполнения';
+        else if (!/\S+@\S+\.\S+/.test(user.email)) newErrors.email = 'Некорректный email';
+
+        return newErrors;
     };
 
     const handleSave = () => {
-        const storedUser = JSON.parse(localStorage.getItem('user')) || {};
+        const newErrors = validateFields();
+        if (Object.keys(newErrors).length > 0) {
+            setErrors(newErrors);
+            return;
+        }
 
+        const storedUser = JSON.parse(localStorage.getItem('user')) || {};
         const updatedUser = {
             ...storedUser,
             ...user,
@@ -65,7 +85,7 @@ const ProfileEdit = () => {
 
     return (
         <div className="profile-edit">
-            <HeaderProfile/>
+            <HeaderProfile />
             <div className="profile-wrapper">
                 <div className="profile-photo">
                     {user.photo ? (
@@ -79,17 +99,17 @@ const ProfileEdit = () => {
                         <div className="profile-edit__lastName">
                             <label>Фамилия</label>
                             <input
-                                className="profile-edit__input"
+                                className={`profile-edit__input ${errors.lastName ? 'error' : ''}`}
                                 maxLength="20"
                                 name="lastName"
                                 value={user.lastName}
                                 onChange={handleChange}
                             />
                         </div>
-                        <div className="profile-edit__firsName">
+                        <div className="profile-edit__firstName">
                             <label>Имя</label>
                             <input
-                                className="profile-edit__input"
+                                className={`profile-edit__input ${errors.firstName ? 'error' : ''}`}
                                 maxLength="20"
                                 name="firstName"
                                 value={user.firstName}
@@ -109,7 +129,7 @@ const ProfileEdit = () => {
                         <div className="profile-edit__email">
                             <label>Почта</label>
                             <input
-                                className="profile-edit__input"
+                                className={`profile-edit__input ${errors.email ? 'error' : ''}`}
                                 maxLength="30"
                                 name="email"
                                 value={user.email}
@@ -120,33 +140,45 @@ const ProfileEdit = () => {
                             <label className="label-about">О себе</label>
                             <textarea
                                 className="profile-edit__input"
-                                maxLength="50"
+                                maxLength="100"
                                 name="about"
                                 value={user.about}
                                 onChange={handleChange}
                             />
                         </div>
                     </div>
-
-                    <div className="profile-edit__photo">
-                        <label htmlFor="photo-upload" className="profile-edit__photo-label">
-                            <span className="text-btn__photo">Выбрать фото</span>
-                        </label>
-                        <input
-                            id="photo-upload"
-                            className="user-profile__photo"
-                            type="file"
-                            accept="image/*"
-                            onChange={handlePhotoChange}
-                        />
-                    </div>
-                    <div className="profile-edit__save" onClick={handleSave}>
-                        Сохранить
-                    </div>
                 </form>
+
+                <div className="profile-wrapper__btn">
+                <div className="profile-edit__photo">
+                    <label htmlFor="photo-upload" className="profile-edit__photo-label">
+                        <span className="text-btn__photo">Выбрать фото</span>
+                    </label>
+                    <input
+                        id="photo-upload"
+                        className="user-profile__photo"
+                        type="file"
+                        accept="image/*"
+                        onChange={handlePhotoChange}
+                    />
+                </div>
+
+
+                <div className="profile-edit__save" onClick={handleSave}>
+                    Сохранить
+                </div>
+                </div>
+
+                <div className="error-messages">
+                    {(errors.email||errors.lastName||errors.firstName) && <ul> Данные не сохранены: </ul>}
+                    {errors.lastName && <li className="error-message">{errors.lastName}</li>}
+                    {errors.firstName && <li className="error-message">{errors.firstName}</li>}
+                    {errors.email && <li className="error-message">{errors.email}</li>}
+                </div>
+
             </div>
         </div>
     );
-}
+};
 
 export default ProfileEdit;
