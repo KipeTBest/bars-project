@@ -15,6 +15,8 @@ import "./style.css"
 import "./resetStyle.css"
 import MainPage from './Components/MainPage/MainPage';
 import MovieCard from "./Components/MovieCard/MovieCard";
+import Registration from "./Components/Registration/Registration";
+
 
 function App() {
 
@@ -39,6 +41,7 @@ function App() {
                     <Route path="/profile/edit" element={<ProfileEdit />} />
                     <Route path="/favorite" element={<FavoriteMovies/>}/>
                     <Route path="/movies/:id" element={<MovieCard/>}/>
+                    <Route path="/registration" element={<Registration />}/>
                 </Routes>
                 <Footer/>
             </div>
