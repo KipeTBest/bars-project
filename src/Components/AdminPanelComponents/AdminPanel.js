@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 const AdminPanel = () => {
 
     const generateUniqueId = () => {
-        return `${Date.now()}`;
+        return Date.now();
     };
 
     const [formData, setFormData] = useState({
