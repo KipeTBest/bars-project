@@ -1,28 +1,52 @@
-import "./Login.css"
-import { useState } from 'react'
-import LoginButton from "./LoginButton/LoginButton"
-import { Link } from "react-router-dom";
-const Login = () => {
-    
-    return(
-        <div className="login">
-            <div className='login-form'>
-                <h1 className="login-title">Войдите в систему</h1>
-                <div className="input-info">
-                    <span className="text-input">Почта</span>
-                    <input type='title' name='login' className="log"/>
-                </div>
-                <div className="input-info">
-                    <span className="text-input">Пороль</span>
-                    <input type='password' name='pass' className="pass"/>
-                </div>
-                <div className="login-buttons">
-                    <Link to=""><LoginButton style={50} data={"Вход"} /></Link>
-                    <Link to=""><LoginButton style={50} data={"Регистация"}/></Link>
-                </div>
-            </div>
-        </div>
-    )
-}
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import "./login.css"
 
-export default Login
+const Login = () => {
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const navigate = useNavigate();
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+        const user = JSON.parse(localStorage.getItem('user'));
+
+        if (user && user.email === email && user.password === password) {
+            user.auth = true;
+            localStorage.setItem('user', JSON.stringify(user));
+            navigate('/profile');
+        } else {
+            alert('Неправильный email или пароль');
+        }
+    };
+
+
+
+    return (
+        <div className="login-container">
+            <h2>Войдите в систему</h2>
+            <form onSubmit={handleLogin}>
+                <input
+                    type="email"
+                    name="email"
+                    placeholder="Почта"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                />
+                <input
+                    type="password"
+                    name="password"
+                    placeholder="Пароль"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    required
+                />
+                <button type="submit">Вход</button>
+            </form>
+            <button className="registration">Регистрация</button>
+        </div>
+    );
+};
+
+export default Login;

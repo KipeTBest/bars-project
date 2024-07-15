@@ -4,7 +4,6 @@ import Heart from './img/heart.svg';
 const MovieContainer = ({ movie, removeFromFavorites }) => {
 
     const handleCardClick = () => {
-        //TODO: какая логика расположения страниц фильмов?
         window.location.href = `/movies/${movie.id}`;
     };
 

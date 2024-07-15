@@ -13,6 +13,7 @@ function ForTheRestSliders({ data }) {
     const goToNextSlide = () => {
         setCurrentIndex(currentIndex === totalSlides - slidesToShow ? 0 : currentIndex + 1);
     };
+    console.log(data);
 
     return (
         <div className="ForTheRestSliders">
@@ -23,8 +24,8 @@ function ForTheRestSliders({ data }) {
                         <>
                             <div key={index} className="slides" 
                             style={{backgroundImage : `url(${el.photos[0]})`}}>
-                                <a href='#'>
-                                    <div class="overlay"></div> 
+                                <a href={`/movies/${el.id}`}>
+                                    <div className="overlay"></div>
                                 </a>
                                 <span className='title'>{el.title}</span>
                             </div>

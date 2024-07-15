@@ -3,7 +3,6 @@ import HeaderProfile from "./HeaderProfile";
 import React, { useState, useEffect } from 'react';
 import MovieContainer from "./MovieContainer";
 
-
 const FavoriteMovies = () => {
 
   const [favoriteMovies, setFavoriteMovies] = useState([]);
@@ -16,11 +15,15 @@ const FavoriteMovies = () => {
 
     setAllMovies(moviesData.movies);
 
-    const favorites = user.favoriteMovies.map(index => ({ ...moviesData.movies[index], id: index }));
+    const favorites = user.favoriteMovies.map(movieId => {
+      const foundMovie = moviesData.movies.find(movie => movie.id === movieId);
+      return foundMovie ? { ...foundMovie, id: movieId } : null;
+    }).filter(movie => movie !== null);
+
     setFavoriteMovies(favorites);
   }, []);
 
-  // Функция для удаления фильма из избранного
+
   const removeFromFavorites = (movieId) => {
     const updatedFavorites = favoriteMovies.filter(movie => movie.id !== movieId);
     setFavoriteMovies(updatedFavorites);
@@ -30,7 +33,6 @@ const FavoriteMovies = () => {
     localStorage.setItem('user', JSON.stringify(user));
   };
 
-  // Разбиение фильмов на страницы по 12 фильмов на странице (4x3)
   const moviesPerPage = 12;
   const numPages = Math.ceil(favoriteMovies.length / moviesPerPage);
   const [currentPage, setCurrentPage] = useState(1);
@@ -38,7 +40,6 @@ const FavoriteMovies = () => {
   const indexOfFirstMovie = indexOfLastMovie - moviesPerPage;
   const currentMovies = favoriteMovies.slice(indexOfFirstMovie, indexOfLastMovie);
 
-  // Переключение страниц
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return(
@@ -50,7 +51,7 @@ const FavoriteMovies = () => {
             <>
               <div className="movies-grid">
                 {currentMovies.map(movie => (
-                    <MovieContainer key={movie.id} movie={movie} removeFromFavorites={removeFromFavorites} />
+                    <MovieContainer key={movie.id} movie={movie} removeFromFavorites={() => removeFromFavorites(movie.id)} />
                 ))}
               </div>
               <div className="pagination">
