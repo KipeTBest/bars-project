@@ -35,6 +35,14 @@
     display: flex;
     flex-direction: column;
 }
+.errorSearch {
+  padding-top: 0.5vw;
+  font-size: 1.1vw;
+  font-family: 'Jura', sans-serif;
+  color: red;
+  display: flex;
+  justify-content: center;
+}
 
 
 .dropdown {
@@ -150,7 +158,7 @@
   justify-content: space-around;
   padding-top: 20px;
 }
-.movie {
+.movies {
     position: relative;
 
     flex: 0 0 auto;

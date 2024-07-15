@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
 import "./FilterMovies.css"
 import { useState } from "react";
 
 const FilterMovies = () => {
     const [selectedOption, setSelectedOption] = useState(null);
     const [searchVerification, setSearchVerification] = useState(true);
+    const [errorSearch, setErrorSearch] = useState(false);
 
     const [genres, setGenres] = useState("")
     const [directors, setDirectors] = useState("")
@@ -29,6 +31,9 @@ const FilterMovies = () => {
     for (let i = 0; i < data.movies.length; i += chunkSize) {
         allMovies.push(data.movies.slice(i, i + chunkSize));
     }
+
+    
+
     const toggleDropdown = () => {
         setIsOpen(!isOpen); 
     };
@@ -57,7 +62,8 @@ const FilterMovies = () => {
 
     const movieSearch = (e) => {
         e.preventDefault();
-        if(title === "" && directors === "" && genres === "") {
+        setErrorSearch(false); 
+        if(title === "" && directors === "" && genres === "") { 
             return
         } else {
             const filteredMovies = [];
@@ -69,14 +75,12 @@ const FilterMovies = () => {
                         element.genres.includes(genres)){
                             setTitleSearchMovies(`Показаны результаты по запросу: ${title}, ${directors}, ${genres}`)
                             filteredMovies.push(element);
-                        }
-                    else if (String(element.title).trim().toLowerCase() === title.trim().toLowerCase() &&
+                        } else if (String(element.title).trim().toLowerCase() === title.trim().toLowerCase() &&
                             element.directors.map(item => item.toLowerCase()).includes(directors.trim().toLowerCase()) &&
                             genres === ""){
                                 setTitleSearchMovies(`Показаны результаты по запросу: ${title}, ${directors}`)
                                 filteredMovies.push(element);
-                        } 
-                    else if (element.directors.map(item => item.toLowerCase()).includes(directors.trim().toLowerCase()) &&
+                        } else if (element.directors.map(item => item.toLowerCase()).includes(directors.trim().toLowerCase()) &&
                             element.genres.includes(genres) &&
                             title === "") {
                                 setTitleSearchMovies(`Показаны результаты по запросу: ${directors}, ${genres}`)
@@ -104,16 +108,29 @@ const FilterMovies = () => {
                         }
                 })
             })
+            
+            
             for (let i = 0; i < filteredMovies.length; i += chunkSize) {
                 filteredMoviesSections.push(filteredMovies.slice(i, i + chunkSize));
             }
-            setMovieSearchArr(filteredMoviesSections);
+            if(filteredMoviesSections.length === 0) {
+                setDirectors("");
+                setTitle("");
+                setSelectedOption("Выберите жанр");
+                setGenres("");
+                setErrorSearch(true);  
+                return 
+            } else {
+                setMovieSearchArr(filteredMoviesSections);
+            }
             setSearchVerification(false);
             setDirectors("");
             setTitle("");
             setSelectedOption("Выберите жанр");
             setGenres("");
             console.log(filteredMovies);
+            console.log(numberingOfFilms)
+            console.log(movieSearchArr)
         }
         
     }
@@ -189,8 +206,6 @@ const FilterMovies = () => {
         }
         handlenumberingOfFilms(e);
     }
-    
-
 
     const deleteSearch = (e) => {
         e.preventDefault();
@@ -229,6 +244,12 @@ const FilterMovies = () => {
                                 ))}
                                 </ul>
                             )}
+                            {errorSearch && (
+                                <>
+                                    <span className="errorSearch">Запрос не найден</span>
+                                </>
+                            )}
+                            
                         </div>
                     </div>
                     <div className="movieSearch" onClick={movieSearch}>Поиск</div>
@@ -245,23 +266,22 @@ const FilterMovies = () => {
                     )}
                     <div className="info-movies-container">
                         {searchVerification && allMovies[numberingOfFilms].map((el, i) => (
-                            <div key={i} className="movie"
+                            <div key={i} className="movies"
                                 style={{backgroundImage : `url(${el.photos[0]})`}}>
-                                <a href='#'>
+                                <Link to={`/movies/${el.id}`}>
                                     <div class="overlay-movie"></div> 
-                                </a>
+                                </Link>
                                 <span className='title-movie'>{el.title}</span>
                             </div>
                         ))}
                         {!searchVerification && movieSearchArr[numberingOfFilms].map((el, i) => (
-                            
-                            <div key={i} className="movie"
+                            <div key={i} className="movies"
                                 style={{backgroundImage : `url(${el.photos[0]})`}}>
-                                <a href='#'>
-                                    {console.log(movieSearchArr)}
+                                <Link to={`/movies/${el.id}`}>
                                     <div class="overlay-movie"></div> 
-                                </a>
+                                </Link>
                                 <span className='title-movie'>{el.title}</span>
+                                {console.log(movieSearchArr[numberingOfFilms])}
                             </div>
                         ))}
                     </div>
