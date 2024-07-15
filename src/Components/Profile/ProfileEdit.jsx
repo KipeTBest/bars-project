@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
 import HeaderProfile from "./HeaderProfile";
 import "./styles/profileEdit.css";
+import { useNavigate } from 'react-router-dom';
 
 const ProfileEdit = () => {
+    const navigate = useNavigate();
+
     const [user, setUser] = useState({
         lastName: '',
         firstName: '',
@@ -88,37 +91,42 @@ const ProfileEdit = () => {
             <HeaderProfile />
             <div className="profile-wrapper">
                 <div className="profile-photo">
-                    {user.photo ? (
-                        <img className="user-photo" src={user.photo} alt="Фото профиля"/>
-                    ) : (
-                        <img className="user-photo" src="./img/profile.jpg" alt="Фото профиля"/>
-                    )}
+                    <img
+                        className="user-photo"
+                        src={user.photo || './img/profile.jpg'}
+                        alt="Фото профиля"
+                    />
                 </div>
                 <form className="profile-form">
                     <div className="profile-form__user-data">
                         <div className="profile-edit__lastName">
-                            <label>Фамилия</label>
+                            <label htmlFor="lastName">Фамилия</label>
                             <input
+                                id="lastName"
                                 className={`profile-edit__input ${errors.lastName ? 'error' : ''}`}
                                 maxLength="20"
                                 name="lastName"
                                 value={user.lastName}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="profile-edit__firstName">
-                            <label>Имя</label>
+                            <label htmlFor="firstName">Имя</label>
                             <input
+                                id="firstName"
                                 className={`profile-edit__input ${errors.firstName ? 'error' : ''}`}
                                 maxLength="20"
                                 name="firstName"
                                 value={user.firstName}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="profile-edit__middleName">
-                            <label>Отчество</label>
+                            <label htmlFor="middleName">Отчество</label>
                             <input
+                                id="middleName"
                                 className="profile-edit__input"
                                 maxLength="20"
                                 name="middleName"
@@ -127,18 +135,21 @@ const ProfileEdit = () => {
                             />
                         </div>
                         <div className="profile-edit__email">
-                            <label>Почта</label>
+                            <label htmlFor="email">Почта</label>
                             <input
+                                id="email"
                                 className={`profile-edit__input ${errors.email ? 'error' : ''}`}
                                 maxLength="30"
                                 name="email"
                                 value={user.email}
                                 onChange={handleChange}
+                                required
                             />
                         </div>
                         <div className="profile-edit__about">
-                            <label className="label-about">О себе</label>
+                            <label htmlFor="about" className="label-about">О себе</label>
                             <textarea
+                                id="about"
                                 className="profile-edit__input"
                                 maxLength="100"
                                 name="about"
@@ -147,34 +158,24 @@ const ProfileEdit = () => {
                             />
                         </div>
                     </div>
+                    <div className="profile-edit__photo">
+                        <label htmlFor="photo-upload" className="profile-edit__photo-label">
+                            <span className="text-btn__photo">Выбрать фото</span>
+                        </label>
+                        <input
+                            id="photo-upload"
+                            className="user-profile__photo"
+                            type="file"
+                            accept="image/*"
+                            onChange={handlePhotoChange}
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        className="profile-edit__save">
+                        Сохранить
+                    </button>
                 </form>
-
-                <div className="profile-wrapper__btn">
-                <div className="profile-edit__photo">
-                    <label htmlFor="photo-upload" className="profile-edit__photo-label">
-                        <span className="text-btn__photo">Выбрать фото</span>
-                    </label>
-                    <input
-                        id="photo-upload"
-                        className="user-profile__photo"
-                        type="file"
-                        accept="image/*"
-                        onChange={handlePhotoChange}
-                    />
-                </div>
-
-
-                <div className="profile-edit__save" onClick={handleSave}>
-                    Сохранить
-                </div>
-                </div>
-
-                <div className="error-messages">
-                    {(errors.email||errors.lastName||errors.firstName) && <ul> Данные не сохранены: </ul>}
-                    {errors.lastName && <li className="error-message">{errors.lastName}</li>}
-                    {errors.firstName && <li className="error-message">{errors.firstName}</li>}
-                    {errors.email && <li className="error-message">{errors.email}</li>}
-                </div>
 
             </div>
         </div>
