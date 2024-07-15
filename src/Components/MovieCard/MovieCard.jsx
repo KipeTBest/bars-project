@@ -24,24 +24,25 @@ const MovieCard = () => {
                 }
 
                 const parsedData = JSON.parse(dataFromStorage);
-                const selectedMovie = parsedData.movies.find(movie => movie.id === parseInt(id));
+                const movieId = parseInt(id);
+                const selectedMovie = parsedData.movies[movieId];
 
                 if (!selectedMovie) {
-                    throw new Error(`Фильм с id ${id} не найден`);
+                    throw new Error(`Фильм с индексом ${id} не найден`);
                 }
 
                 setMovie(selectedMovie);
 
                 const reviewsFromStorage = localStorage.getItem('reviews');
                 const parsedReviews = reviewsFromStorage ? JSON.parse(reviewsFromStorage) : { reviews: [] };
-                const selectedReviews = parsedReviews.reviews.filter(review => review.movieId === parseInt(id));
+                const selectedReviews = parsedReviews.reviews.filter(review => review.movieId === movieId);
                 setReviews(selectedReviews);
 
                 const userData = localStorage.getItem('user');
                 if (userData) {
                     const parsedUserData = JSON.parse(userData);
                     setIsAuthenticated(parsedUserData.auth);
-                    setIsFavorite(parsedUserData.favoriteMovies.includes(selectedMovie.id));
+                    setIsFavorite(parsedUserData.favoriteMovies.includes(movieId));
                 }
 
                 setLoading(false);
@@ -67,6 +68,7 @@ const MovieCard = () => {
 
             const reviewsFromStorage = localStorage.getItem('reviews');
             const parsedReviews = reviewsFromStorage ? JSON.parse(reviewsFromStorage) : { reviews: [] };
+            newReview.movieId = parseInt(id);
             parsedReviews.reviews.push(newReview);
             localStorage.setItem('reviews', JSON.stringify(parsedReviews));
 
@@ -75,8 +77,6 @@ const MovieCard = () => {
         } catch (error) {
             console.error(error.message);
         }
-
-
     };
 
     const toggleFavorite = () => {
@@ -88,9 +88,9 @@ const MovieCard = () => {
 
             let updatedFavoriteMovies;
             if (isFavorite) {
-                updatedFavoriteMovies = userData.favoriteMovies.filter(favId => favId !== movie.id);
+                updatedFavoriteMovies = userData.favoriteMovies.filter(favIndex => favIndex !== parseInt(id));
             } else {
-                updatedFavoriteMovies = [...userData.favoriteMovies, movie.id];
+                updatedFavoriteMovies = [...userData.favoriteMovies, parseInt(id)];
             }
 
             userData.favoriteMovies = updatedFavoriteMovies;

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-
 const MovieReviews = ({ reviews, isAuthenticated, movieId, onAddReview }) => {
     const [newReviewText, setNewReviewText] = useState('');
 
@@ -14,8 +13,8 @@ const MovieReviews = ({ reviews, isAuthenticated, movieId, onAddReview }) => {
         }
 
         const newReview = {
-            movieId: parseInt(movieId),
-            reviewText: newReviewText
+            movieId: parseInt(movieId), // Изменено на movieId
+            reviewText: newReviewText,
         };
 
         onAddReview(newReview);
@@ -27,7 +26,7 @@ const MovieReviews = ({ reviews, isAuthenticated, movieId, onAddReview }) => {
             <h1> Обсуждения: </h1>
             {reviews.length > 0 ? reviews.map((review, index) => (
                 <div key={index} className="review-container">
-                    <img src={review.userInfo[2]} alt={`${review.userInfo[0]} ${review.userInfo[1]}`}/>
+                    <img src={review.userInfo[2]} alt={`${review.userInfo[0]} ${review.userInfo[1]}`} />
                     <div className="review-container__data">
                         <h5>{`${review.userInfo[0]} ${review.userInfo[1]}`}</h5>
                         <p>{review.reviewText}</p>

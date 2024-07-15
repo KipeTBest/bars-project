@@ -2,12 +2,15 @@ import "./styles/favoriteMovies.css"
 import HeaderProfile from "./HeaderProfile";
 import React, { useState, useEffect } from 'react';
 import MovieContainer from "./MovieContainer";
+import { useNavigate } from "react-router-dom";
 
 const FavoriteMovies = () => {
   const [favoriteMovies, setFavoriteMovies] = useState([]);
   const [allMovies, setAllMovies] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   const fetchData = async () => {
     setLoading(true);
@@ -26,8 +29,14 @@ const FavoriteMovies = () => {
   };
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    const storedUser = JSON.parse(localStorage.getItem('user'));
+
+    if (!storedUser || !storedUser.auth) {
+      navigate("/login");
+    } else {
+      fetchData();
+    }
+  }, [navigate]);
 
   const removeFromFavorites = (movieId) => {
     const updatedFavorites = favoriteMovies.filter(movie => movie.id !== movieId);
