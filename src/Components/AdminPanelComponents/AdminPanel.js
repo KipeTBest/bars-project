@@ -2,6 +2,11 @@ import './adminPanel.css';
 import React, { useState, useEffect } from 'react';
 
 const AdminPanel = () => {
+
+    const generateUniqueId = () => {
+        return `${Date.now()}`;
+    };
+
     const [formData, setFormData] = useState({
         title: '',
         genre: '',
@@ -15,7 +20,9 @@ const AdminPanel = () => {
 
     useEffect(() => {
         const storedData = JSON.parse(localStorage.getItem('data'));
-        setMovies(storedData.movies || []);
+        if (storedData) {
+            setMovies(storedData.movies || []);
+        }
     }, []);
 
     useEffect(() => {
@@ -58,11 +65,11 @@ const AdminPanel = () => {
             directors: formData.director.split(',').map(item => item.trim()),
             description: formData.description,
             photos: [previewSrc],
-            id: editId !== null ? editId : movies.length
+            id: editId !== null ? editId : generateUniqueId() // Используйте уникальный ID
         };
 
-        const storedData = JSON.parse(localStorage.getItem('data'));
-        let updatedMovies = storedData.movies || [];
+        const storedData = JSON.parse(localStorage.getItem('data')) || { movies: [] };
+        let updatedMovies = storedData.movies;
 
         if (editId !== null) {
             // Обновление существующего фильма по id
