@@ -11,11 +11,28 @@ const AdminPanel = () => {
     });
     const [previewSrc, setPreviewSrc] = useState('');
     const [movies, setMovies] = useState([]);
+    const [editId, setEditId] = useState(null);
 
     useEffect(() => {
         const storedData = JSON.parse(localStorage.getItem('data'));
         setMovies(storedData.movies || []);
     }, []);
+
+    useEffect(() => {
+        if (editId !== null) {
+            const movie = movies.find(m => m.id === editId);
+            if (movie) {
+                setFormData({
+                    title: movie.title,
+                    genre: movie.genres.join(', '),
+                    director: movie.directors.join(', '),
+                    description: movie.description,
+                    photo: null
+                });
+                setPreviewSrc(movie.photos[0] || '');
+            }
+        }
+    }, [editId, movies]);
 
     const handleChange = (e) => {
         const { name, value, files } = e.target;
@@ -40,17 +57,24 @@ const AdminPanel = () => {
             genres: formData.genre.split(',').map(item => item.trim()),
             directors: formData.director.split(',').map(item => item.trim()),
             description: formData.description,
-            photos: [previewSrc]
+            photos: [previewSrc],
+            id: editId !== null ? editId : movies.length
         };
 
         const storedData = JSON.parse(localStorage.getItem('data'));
+        let updatedMovies = storedData.movies || [];
 
-        const updatedMovies = Array.isArray(storedData.movies) ? [...storedData.movies, newMovie] : [newMovie];
+        if (editId !== null) {
+            // Обновление существующего фильма по id
+            updatedMovies = updatedMovies.map(movie => (movie.id === editId ? newMovie : movie));
+        } else {
+            // Добавление нового фильма
+            updatedMovies = [...updatedMovies, newMovie];
+        }
 
         localStorage.setItem('data', JSON.stringify({ movies: updatedMovies }));
 
         setMovies(updatedMovies);
-
         setFormData({
             title: '',
             genre: '',
@@ -59,12 +83,28 @@ const AdminPanel = () => {
             photo: null
         });
         setPreviewSrc('');
+        setEditId(null);
     };
 
-    const handleDelete = (index) => {
-        const updatedMovies = movies.filter((_, i) => i !== index);
+    const handleEdit = (id) => {
+        setEditId(id);
+    };
+
+    const handleDelete = (id) => {
+        const updatedMovies = movies.filter(movie => movie.id !== id);
         localStorage.setItem('data', JSON.stringify({ movies: updatedMovies }));
         setMovies(updatedMovies);
+        if (editId === id) {
+            setFormData({
+                title: '',
+                genre: '',
+                director: '',
+                description: '',
+                photo: null
+            });
+            setPreviewSrc('');
+            setEditId(null);
+        }
     };
 
     return (
@@ -72,7 +112,7 @@ const AdminPanel = () => {
             <div className='admin-panel__info'>
                 <div className='admin-panel__content'>
                     <p className='admin-panel__content__text'>Управление фильмами</p>
-                    <p className='admin-panel__content__text'>Добавить новый:</p>
+                    <p className='admin-panel__content__text'>{editId !== null ? 'Редактировать фильм:' : 'Добавить новый:'}</p>
                 </div>
             </div>
             <form className='admin-panel__form-container' onSubmit={handleSubmit}>
@@ -103,7 +143,7 @@ const AdminPanel = () => {
                     <label htmlFor='description' className='form-title'>Описание:</label>
                     <textarea id='description' name='description' className='description' value={formData.description} onChange={handleChange}></textarea>
                 </div>
-                <button type='submit' className='form-button'>Добавить</button>
+                <button type='submit' className='form-button'>{editId !== null ? 'Сохранить' : 'Добавить'}</button>
             </form>
             <div className='admin-panel__database'>
                 <p className='admin-panel__database__text'>База данных:</p>
@@ -119,14 +159,14 @@ const AdminPanel = () => {
                     </tr>
                     </thead>
                     <tbody>
-                    {movies.map((movie, index) => (
-                        <tr key={index}>
+                    {movies.map((movie) => (
+                        <tr key={movie.id}>
                             <td>{movie.title}</td>
                             <td>{movie.genres.join(', ')}</td>
                             <td>{movie.directors.join(', ')}</td>
                             <td>{movie.description}</td>
-                            <td onClick={() => handleDelete(index)}>❌</td>
-                            <td>🖋</td>
+                            <td onClick={() => handleDelete(movie.id)}>❌</td>
+                            <td onClick={() => handleEdit(movie.id)}>🖋</td>
                         </tr>
                     ))}
                     </tbody>
