@@ -497,17 +497,6 @@
       ]
     },
     {
-      "id": 44,
-      "title": "Хэллоуин",
-      "genres": ["ужасы", "слэшер"],
-      "directors": ["Джон Карпентер"],
-      "description": "Маньяк Майкл Майерс возвращается в родной город, чтобы убивать снова.",
-      "photos": [
-        "https://i.pinimg.com/736x/b3/c1/ed/b3c1ed6cfa76ec192d00e152148630a0.jpg",
-        "https://cdn.example.com/logo192.png"
-      ]
-    },
-    {
       "id": 45,
       "title": "Адвокат дьявола",
       "genres": ["ужасы", "триллер"],
@@ -691,17 +680,6 @@
       "description": "Убийца-киборг из будущего и его защитница Сара Коннор сражаются с новым терминатором, чтобы защитить будущего человечества.",
       "photos": [
         "https://avatars.mds.yandex.net/get-kinopoisk-image/1900788/afbfa10c-f7d4-4bf6-8361-b5243798bbf4/1920x",
-        "public/logo192.png"
-      ]
-    },
-    {
-      "id": 61,
-      "title": "Форсаж 5",
-      "genres": ["боевик", "триллер"],
-      "directors": ["Джастин Лин"],
-      "description": "Группа международных грабителей планирует невозможное – ограбление Бразильского банка под защитой коррумпированных федеральных агентов.",
-      "photos": [
-        "https://i.pinimg.com/originals/92/68/bc/9268bcb37eee04a547d38485a5a29d30.jpg",
         "public/logo192.png"
       ]
     },
@@ -1284,7 +1262,7 @@
       "directors": ["Уолт Дорн", "Майк Митчелл"],
       "description": "История о тролях, чьи танцы и песни распространяют радость по всему миру.",
       "photos": [
-        "https://avatars.mds.yandex.net/get-mpic/4742551/img_id3818395358140257763.jpeg/orig",
+        "https://static.kinoafisha.info/k/movie_posters/1920x1080/upload/movie_posters/2/2/5/8168522/662771961653466539.jpg",
         "public/logo192.png"
       ]
     },
@@ -1362,6 +1340,28 @@
       "description": "История о молодом льве, который должен стать королем после смерти своего отца.",
       "photos": [
         "https://avatars.mds.yandex.net/get-kinopoisk-image/1704946/60aa1abc-b754-4817-ad9c-0bcda427a12b/1920x",
+        "public/logo192.png"
+      ]
+    },
+    {
+      "id": 122,
+      "title": "Хэллоуин",
+      "genres": ["ужасы", "слэшер"],
+      "directors": ["Джон Карпентер"],
+      "description": "Маньяк Майкл Майерс возвращается в родной город, чтобы убивать снова.",
+      "photos": [
+        "https://i.pinimg.com/736x/b3/c1/ed/b3c1ed6cfa76ec192d00e152148630a0.jpg",
+        "https://cdn.example.com/logo192.png"
+      ]
+    },
+    {
+      "id": 123,
+      "title": "Форсаж 5",
+      "genres": ["боевик", "триллер"],
+      "directors": ["Джастин Лин"],
+      "description": "Группа международных грабителей планирует невозможное – ограбление Бразильского банка под защитой коррумпированных федеральных агентов.",
+      "photos": [
+        "https://i.pinimg.com/originals/92/68/bc/9268bcb37eee04a547d38485a5a29d30.jpg",
         "public/logo192.png"
       ]
     }

@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Arrow from './arrow.svg';
 import "./login.css"
 
 const Login = () => {
@@ -7,44 +8,80 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const navigate = useNavigate();
 
+    useEffect(() => {
+        const storedUser = JSON.parse(localStorage.getItem('user'));
+        if (storedUser && storedUser.auth) {
+            navigate('/profile');
+        }
+    }, [navigate]);
+
     const handleLogin = (e) => {
         e.preventDefault();
-        const user = JSON.parse(localStorage.getItem('user'));
+        const usersData = JSON.parse(localStorage.getItem('users')) || { users: [] };
+        const existingUser = usersData.users.find(user => user.email === email && user.password === password);
 
-        if (user && user.email === email && user.password === password) {
-            user.auth = true;
-            localStorage.setItem('user', JSON.stringify(user));
+        if (existingUser) {
+            existingUser.auth = true;
+            localStorage.setItem('user', JSON.stringify(existingUser));
+            console.log("User authorized");
             navigate('/profile');
         } else {
-            alert('Неправильный email или пароль');
+            alert('Неверный email или пароль');
         }
     };
 
+    const handleRegister = (e) => {
+        e.preventDefault();
+        navigate('/registration');
+    };
 
+    const handlePage = (e) => {
+        e.preventDefault();
+        navigate('/');
+    }
 
     return (
-        <div className="login-container">
-            <h2>Войдите в систему</h2>
-            <form onSubmit={handleLogin}>
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Почта"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-                <input
-                    type="password"
-                    name="password"
-                    placeholder="Пароль"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    required
-                />
-                <button type="submit">Вход</button>
-            </form>
-            <button className="registration">Регистрация</button>
+        <div className="login">
+
+            <div className="login-header">
+                <button className="login-header__arrow" onClick={handlePage}>
+                    <img src={Arrow} alt="arrow"/>
+                </button>
+                <span className="login-header__title">
+                    Войдите в систему
+                </span>
+            </div>
+
+            <div className="login-content">
+                <form onSubmit={handleLogin}>
+
+                    <label htmlFor="email">Почта</label>
+                    <input
+                        type="email"
+                        className="login__form__input"
+                        id="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+
+                    <label htmlFor="password">Пароль</label>
+                    <input
+                        type="password"
+                        className="login__form__input"
+                        id="password"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                    />
+
+                    <input type="submit" value="Войти"/>
+                </form>
+            </div>
+
+            <button className="login-footer__toRegistration" onClick={handleRegister}>
+                Регистрация
+            </button>
         </div>
     );
 };

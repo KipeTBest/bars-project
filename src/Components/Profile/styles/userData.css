@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 127px;
 }
 
 .user-details{
@@ -11,27 +10,22 @@
     font-family: 'Inter', sans-serif;
     margin-top: 165px;
     margin-left: 370px;
-    margin-bottom: 533px;
 }
 
 
-.user-detail__name {
-    margin-bottom: 10px;
-}
-
-.user-detail__email {
-    margin-bottom: 10px;
-}
-
+.user-detail__name,
+.user-detail__email,
 .user-detail__about {
+    margin-left: 127px;
     margin-bottom: 10px;
 }
 
 .user-photo{
-    width: 325px;
-    height: 530px;
+    width: 260px;
+    height: auto;
     position: absolute;
-    top: 637px;
-    left: 400px;
     border-radius: 30px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+    flex-shrink: 0;
 }

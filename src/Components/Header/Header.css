@@ -1,13 +1,14 @@
 .Header {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    padding: 35px 44px 65px 44px ;
+    padding: 2vw 3vw 3vw 3vw;
     background-color: #0E456E;
 }
 .Header span {
-    color:white;
-    font-size: 48px;
+    color: white;
+    font-size: 3vw;
 }
 .HeaderImg img {
-    padding: 0 20px 0 20px;
+    padding: 0 1vw 0 1vw;
 }

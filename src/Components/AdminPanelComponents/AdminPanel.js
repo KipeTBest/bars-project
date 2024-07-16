@@ -34,7 +34,6 @@ const AdminPanel = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
         const newMovie = {
             title: formData.title,
             genres: formData.genre.split(',').map(item => item.trim()),
@@ -80,15 +79,15 @@ const AdminPanel = () => {
                     <div className='left'>
                         <div className='form-group'>
                             <label htmlFor='title' className='form-title'>Название:</label>
-                            <input type='text' id='title' name='title' className="form-title" value={formData.title} onChange={handleChange} />
+                            <input type='text' id='title' name='title' className="form-input" value={formData.title} onChange={handleChange} />
                         </div>
                         <div className='form-group'>
                             <label htmlFor='genre' className='form-title'>Жанр:</label>
-                            <input type='text' id='genre' name='genre' className="form-title" value={formData.genre} onChange={handleChange} />
+                            <input type='text' id='genre' name='genre' className="form-input" value={formData.genre} onChange={handleChange} />
                         </div>
                         <div className='form-group'>
                             <label htmlFor='director' className='form-title'>Режиссер:</label>
-                            <input type='text' id='director' name='director' className="form-title" value={formData.director} onChange={handleChange} />
+                            <input type='text' id='director' name='director' className="form-input" value={formData.director} onChange={handleChange} />
                         </div>
                     </div>
                     <div className='right'>
@@ -99,7 +98,7 @@ const AdminPanel = () => {
                         </div>
                     </div>
                 </div>
-                <div className='form-group'>
+                <div className='form-group form-group-description'>
                     <label htmlFor='description' className='form-title'>Описание:</label>
                     <textarea id='description' name='description' className='description' value={formData.description} onChange={handleChange}></textarea>
                 </div>
@@ -110,23 +109,25 @@ const AdminPanel = () => {
                 <table>
                     <thead>
                     <tr>
+                        <th>Номер:</th>
                         <th>Название:</th>
                         <th>Жанр:</th>
                         <th>Режиссер:</th>
                         <th>Описание:</th>
                         <th></th>
-                        <th></th>
+                        {/* <th></th> */}
                     </tr>
                     </thead>
                     <tbody>
                     {movies.map((movie, index) => (
                         <tr key={index}>
+                            <td>{movie.id}</td>
                             <td>{movie.title}</td>
                             <td>{movie.genres.join(', ')}</td>
                             <td>{movie.directors.join(', ')}</td>
                             <td>{movie.description}</td>
-                            <td onClick={() => handleDelete(index)}>❌</td>
-                            <td>🖋</td>
+                            <td className='tr-button' onClick={() => handleDelete(index)}>❌</td>
+                            {/* <td className='tr-button change-info-movies'>🖋</td> */}
                         </tr>
                     ))}
                     </tbody>

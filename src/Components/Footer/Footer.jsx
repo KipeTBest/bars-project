@@ -12,26 +12,27 @@ const Footer = () => {
 
     return(
         <div className="footer">
-            <ul className="footer__about">
+            <div className="footer__about">
                 <Link to="/" onClick={scrollToTop}><span>NewC</span></Link>
                 <p className="footer-about-p">NewC — ваша новая киноплатформа.</p>
-            </ul>
+            </div>
 
-            <ul className="footer__contact">
-                <li>Контактная информация</li>
-                <li>Email: newCinema@gmail.com</li>
-                <li>Адрес: улица Пушкина, дом Калатушкина</li>
-            </ul>
+            <div className="footer__contact">
+                <ul>
+                    <li>Контактная информация</li>
+                    <li>Email: newCinema@gmail.com</li>
+                    <li>Адрес: улица Пушкина, дом Калатушкина</li>
+                </ul>
+            </div>
 
-            <ul className="footer__pages">
-                <Link to="/profile" onClick={scrollToTop}><span>Личный кабинет</span></Link>
-                <Link to="/favorite" onClick={scrollToTop}><span>Избранные фильмы</span></Link>
-                <Link to="/" onClick={scrollToTop}><span>Поиск</span></Link>
-            </ul>
+            <div className="footer__pages">
+                <ul>
+                    <li><Link to="/profile" onClick={scrollToTop}><span>Личный кабинет</span></Link></li>
+                    <li><Link to="/favorite" onClick={scrollToTop}><span>Избранные фильмы</span></Link></li>
+                    <li><Link to="/" onClick={scrollToTop}><span>Поиск</span></Link></li>
+                </ul>
+            </div>
 
-            <ul className="footer__icons">
-
-            </ul>
 
         </div>
     )

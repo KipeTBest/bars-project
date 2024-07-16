@@ -1,16 +1,16 @@
-.login {
+/**/
+.registration {
     background: linear-gradient(90deg, #0C2232 0%, #246798 100%);
     margin: 200px auto;
-    width: 100%;
-    max-width: 700px;
+    width: 90%;
+    max-width: 995px;
     border-radius: 100px;
-    padding: 40px;
+    padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-
 @media (max-width: 768px) {
-    .login {
+    .registration {
         margin-top: 30px;
         margin-bottom: 30px;
         padding: 25px;
@@ -19,7 +19,7 @@
 }
 
 @media (max-width: 480px) {
-    .login {
+    .registration {
         margin-top: 20px;
         margin-bottom: 20px;
         padding: 10px;
@@ -29,68 +29,60 @@
 
 /*header styles*/
 
-.login-header {
+.registration-header {
+    margin-top: 10px;
+    margin-left: 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.login-header__title {
+.registration-header__title{
     color: white;
     font-family: "Russo One", sans-serif;
-    font-size: 45px;
+    font-size: 48px;
     font-weight: 400;
     line-height: 60px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    margin-top: auto;
 }
-
-.login-header__arrow{
+.registration-header__arrow{
     margin-left: 20px;
 }
 
 /*content styles*/
-.login-content {
+
+.registration-content{
     margin-top: 70px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
 }
 
-.login-content {
-    display: flex;
-    align-items: center;
-}
-
-.login-content label {
-    color: #BCF8F7;
+.registration-content label{
+    color: #BCF8F7;;
     font-family: 'Jura', sans-serif;
-    font-size: 48px;
-    margin-right: 20px;
-    flex-shrink: 0;
-    width: 200px;
+    font-size: 40px;
+    text-align: right;
 }
 
-.login-content input[type="email"],
-.login-content input[type="password"] {
-    max-width: 400px;
-    width: calc(100% - 220px);
+.registration-content input[type="text"],
+.registration-content input[type="email"],
+.registration-content input[type="password"] {
+    max-width: 530px;
+    width: 100%;
     height: 60px;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 30px;
     box-sizing: border-box;
-    background-color: white;
     margin-bottom: 30px;
-    flex-grow: 1;
+    background-color: white;
     font-size: 30px;
 }
 
+
 /*buttons styles*/
 
-.login input[type="submit"], .login-footer__toRegistration{
+.registration input[type="submit"], .registration-footer__toLogin{
     background: linear-gradient(156.47deg, #68FFFF 31.83%, #3492FF 109.56%);
     font-family: 'Jura', sans-serif;
     font-size: 32px;
@@ -100,20 +92,20 @@
     border: none;
     border-radius: 35px;
     cursor: pointer;
-    max-width: 580px;
+    max-width: 600px;
     max-height: 70px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.login-footer__toRegistration{
+.registration-footer__toLogin{
     margin-top: 20px;
     margin-bottom: 30px;
     display: table;
 }
 
-.login input[type="submit"] {
+.registration input[type="submit"] {
     margin-top: 50px;
     text-align: center;
     align-items: center;
@@ -121,6 +113,8 @@
 }
 
 
-.login input[type="submit"]:hover, .login-footer__toRegistration:hover {
+.registration input[type="submit"]:hover, .registration-footer__toLogin:hover {
     box-shadow: 0 5px 5px 0 #00000078 inset;
 }
+
+
