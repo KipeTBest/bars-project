@@ -42,9 +42,11 @@ const UserData = () => {
                 <li className="user-detail__name">
                     {`${user.lastName} ${user.firstName}`}
                 </li>
+
                 <li className="user-detail__email">
                     {user.email}
                 </li>
+
                 {user.about && <>
                     <li className="user-detail__about">О себе: {user.about} </li>
                 </>}

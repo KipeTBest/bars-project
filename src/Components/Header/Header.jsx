@@ -10,7 +10,7 @@ function Header() {
         <div className="HeaderImg">
             <Link to="/favorite"><img src={Like}/></Link>
             <Link to="/profile"><img src={User}/></Link>
-            <img src={Search}/>
+            <Link to="/filterMovies"><img src={Search}/></Link>
         </div>
       </div>
     );

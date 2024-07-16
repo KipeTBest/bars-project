@@ -1,51 +1,47 @@
-/* Основные стили для общего контейнера футтера */
 .footer {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     background-color: black;
     color: white;
-    padding: 40px 20px;
+    padding: 4vw 3vw 3vw 5vw;
     font-family: 'Inter', sans-serif;
-    font-size: 20px;
 }
 
 .footer__about {
-    flex: 1;
-    max-width: 500px;
-    margin-right: 800px;
+    flex: 1 1;
+    max-width: 56vw;
+    margin-right: auto;
 }
 
 .footer__about a {
-    font-size: 50px;
+    font-size: 3vw;
     color: #BCF8F7;
 }
 
 .footer__about p {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 1vw;
+    margin-top: 1vw;
     color: #BCF8F7;
 }
 
-
-.footer__contact {
-    flex: 1;
+.footer__contact, .footer__pages {
+    flex: 1 1;
+    max-width: 19vw;
+    margin-left: 1vw;
 }
 
-.footer__contact li {
-    font-size: 20px;
-    margin-bottom: 20px;
+.footer__contact ul, .footer__pages ul {
+    list-style-type: none;
+    padding: 0;
 }
 
-.footer__pages {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    flex: 1;
+.footer__contact li, .footer__pages li {
+    font-size: 1vw;
+    margin-bottom: 1vw;
 }
 
 .footer__pages a {
     color: white;
-    display: block;
-    margin-bottom: 20px;
+    text-decoration: none;
 }

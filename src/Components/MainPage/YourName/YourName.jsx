@@ -29,8 +29,8 @@ function YourName() {
     <div className="yourName">
         <span>Новинки:</span>
         <div className="yourNameInfo">
-            {!user.auth ? <p>Войдите в аккаунт</p> : <p>Привет {user.firstName}</p>}
-            <Link to="/profile"><Button data={"подоробнее"} style={20}/></Link>
+            {!user.auth ? <p>Войдите в аккаунт</p> : <p>Привет, {user.firstName}</p>}
+            <Link to="/profile"><Button data={"подробнее"} style={20}/></Link>
         </div>
     </div>
     );

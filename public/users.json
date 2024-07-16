@@ -1,0 +1,24 @@
+{
+  "users": [
+    {
+      "email": "admin@example.com",
+      "password": "password123",
+      "role": "admin",
+      "auth": false,
+      "lastName":"Иванов",
+      "firstName":"Иван",
+      "photo" : "https://i.pinimg.com/originals/58/72/74/587274fa96e6d1a1783915edc35f53b5.jpg",
+      "favoriteMovies": [1,2,3,6,7,8]
+    },
+    {
+      "email": "user@example.com",
+      "password": "password123",
+      "role": "admin",
+      "auth": false,
+      "lastName":"Игнатенко",
+      "firstName":"Игнат",
+      "photo" : "https://i.pinimg.com/originals/58/72/74/587274fa96e6d1a1783915edc35f53b5.jpg",
+      "favoriteMovies": []
+    }
+  ]
+}

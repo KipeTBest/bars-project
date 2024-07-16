@@ -4,7 +4,7 @@ import './ForTheRestSliders.css';
 function ForTheRestSliders({ data }) {
     const [currentIndex, setCurrentIndex] = useState(0);
     const slidesToShow = 4
-    const totalSlides = data.length;
+    const totalSlides = 9;
 
     const goToPrevSlide = () => {
         setCurrentIndex(currentIndex === 0 ? totalSlides - slidesToShow : currentIndex - 1);

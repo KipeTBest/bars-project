@@ -44,13 +44,14 @@ const UserProfile = () => {
         <div className="user-profile">
             <HeaderProfile />
             <UserData />
-            <div className="profile-wrapper">
-                <ul className="profile-footer">
+
+            <div className="profile-footer">
+                <ul className="profile-footer__user">
                     <li className="profile-footer__item">
                         <NavLink
                             to="/profile/edit"
                             className="profile-footer-editProfile">
-                            Изменить данные
+                                Изменить данные
                         </NavLink>
                     </li>
 
@@ -59,22 +60,22 @@ const UserProfile = () => {
                             to="/login"
                             className="profile-footer-exit"
                             onClick={handleLogout}>
-                            Выйти
+                                Выйти
                         </NavLink>
                     </li>
                 </ul>
+            </div>
 
-                <ul className="profile-footer__admin">
-                    {user.role === 'admin' && (
-                        <li className="profile-footer__admin-item">
-                            <NavLink
-                                to="/adminPanel"
-                                className="profile-footer-admin">
-                                Управление фильмами
-                            </NavLink>
-                        </li>
-                    )}
-                </ul>
+            <div className="profile-footer__admin">
+                {user.role === 'admin' && (
+                    <div className="profile-footer__admin-item">
+                        <NavLink
+                            to="/adminPanel"
+                            className="profile-footer-admin">
+                            Управление фильмами
+                        </NavLink>
+                    </div>
+                )}
             </div>
         </div>
     );

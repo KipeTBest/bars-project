@@ -20,6 +20,7 @@ function Slider({ data }) {
                 <div className="slides-container" style={{ transform: `translateX(-${currentIndex * (100 / slidesToShow)}%)` }}>
                     
                     {data.map((el, index) => (
+                        
                         <div key={index} className="slide" 
                         style={{backgroundImage : `url(${el.photos[0]})`}}>
                             <a href={`/movies/${el.id}`}>

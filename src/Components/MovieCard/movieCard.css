@@ -38,30 +38,49 @@
     background: linear-gradient(to right, #0C2232, #246798);
     margin-left: 150px;
     margin-right: 194px;
-    height: 460px;
     border-radius: 15px;
-
     display: flex;
+    align-items: flex-start;
+    overflow: hidden;
 }
 
-.movie-container img{
+.movie-container img {
     width: 332px;
-    height: 100%;
+    height: auto;
     border-radius: 15px;
     object-fit: cover;
     transition: opacity 0.3s ease;
+    flex-shrink: 0;
 }
 
-.movie-container h3{
-    padding: 30px;
+.movie-container__text {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    padding: 60px 40px;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+}
+
+.movie-container h3 {
     font-family: 'Jura', sans-serif;
     font-size: 30px;
     font-weight: 400;
-    line-height: 60px;
+    line-height: 45px;
     color: #FFFFFF;
+    margin-right: 60px;
 }
 
-.movie-reviews{
+.favorite-button {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 30px;
+}
+.movie-reviews {
     padding-top: 60px;
     font-family: 'Jura', sans-serif;
     font-size: 64px;
@@ -82,7 +101,7 @@
     margin-top: 50px;
 }
 
-.review-container img{
+.review-container img {
     width: 157px;
     height: 157px;
     border-radius: 50%;
@@ -90,15 +109,15 @@
     flex-shrink: 0;
 }
 
-.review-container__data{
+.review-container__data {
     margin-left: 30px;
 }
 
-.review-container__data h5{
+.review-container__data h5 {
     font-size: 48px;
 }
 
-.review-container__data p{
+.review-container__data p {
     background: linear-gradient(90deg, #BCF8F7 0%, #6F9291 100%);
     border-radius: 30px;
     padding: 5px 20px;
@@ -109,6 +128,7 @@
     display: inline-block;
     margin-right: 250px;
 }
+
 .movie-reviews__add {
     display: flex;
     flex-direction: column;
@@ -118,7 +138,7 @@
 }
 
 .movie-reviews__add textarea {
-    width: 1132px;
+    max-width: 1132px;
     min-height: 70px;
     max-height: 120px;
     resize: none;
@@ -139,7 +159,7 @@
     cursor: pointer;
     margin-right: 220px;
     background: linear-gradient(90deg, #1D283D 0%, #4D6DA3 51%);
-    color:white;
+    color: white;
     opacity: 1;
 }
 
@@ -147,10 +167,7 @@
     opacity: 0.6;
 }
 
-.favorite-button{
-    padding-right: 30px;
-    padding-top: 10px;
-    width: 157px;
-    height: 157px;
+.movie-reviews__add button:hover {
+    opacity: 0.6;
 }
 

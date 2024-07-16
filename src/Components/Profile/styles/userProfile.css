@@ -3,20 +3,20 @@
     margin: 261px 281px;
 }
 
-.profile-wrapper {
-    display: flex;
+.profile-footer{
+    display: inline-block;
 }
 
-.profile-footer {
+.profile-footer__user {
     display: inline-block;
     text-align: center;
     font-size: 36px;
-    font-weight: 400;
     font-family: 'Inter', sans-serif;
     position: relative;
-    top: -300px;
-    left: 85px;
     margin-right: 20px;
+    margin-left: 58px;
+    margin-bottom: 20px;
+    margin-top: 400px;
 }
 
 .profile-footer__item {
@@ -36,24 +36,21 @@
 }
 
 .profile-footer__admin {
+    top: -13.5px;
     width: 332px;
     height: 138px;
     display: inline-block;
     text-align: center;
-
-    font-weight: 400;
-
     position: relative;
-    top: -305px;
-    left: 85px;
-    margin-left: 20px;
     color: white;
     background: #0C2232;
     padding: 10px 20px;
+    margin-bottom: 30px;
 }
 
 .profile-footer__admin-item {
     margin-bottom: 10px;
+    font-size: 36px;
 }
 
 .profile-footer-admin{

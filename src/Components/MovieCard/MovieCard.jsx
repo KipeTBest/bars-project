@@ -1,18 +1,17 @@
-import React, { useEffect, useState, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import "./movieCard.css";
 import backgroundImg from "./background.jpg";
 import Heart from "./../Profile/img/heart.svg";
 import HeartNotLike from "./../Profile/img/heart-outline.svg";
-
-//TODO: нужно переделать, но работает
+import MovieReviews from './MovieReviews';
 
 const MovieCard = () => {
+
     const { id } = useParams();
     const [movie, setMovie] = useState(null);
     const [loading, setLoading] = useState(true);
     const [reviews, setReviews] = useState([]);
-    const [newReviewText, setNewReviewText] = useState('');
     const [isAuthenticated, setIsAuthenticated] = useState(false);
     const [isFavorite, setIsFavorite] = useState(false);
 
@@ -55,27 +54,14 @@ const MovieCard = () => {
         fetchData();
     }, [id]);
 
-    const handleReviewChange = (e) => {
-        setNewReviewText(e.target.value);
-    };
-
-    const handleAddReview = () => {
-        if (newReviewText.trim() === '') {
-            return;
-        }
-
+    const handleAddReview = (newReview) => {
         try {
             const userData = JSON.parse(localStorage.getItem('user'));
             if (!userData) {
                 throw new Error('Пользователь не найден в localStorage');
             }
 
-            const newReview = {
-                movieId: parseInt(id),
-                userInfo: [userData.lastName, userData.firstName, userData.photo],
-                reviewText: newReviewText
-            };
-
+            newReview.userInfo = [userData.lastName, userData.firstName, userData.photo];
             const updatedReviews = [...reviews, newReview];
             setReviews(updatedReviews);
 
@@ -84,10 +70,13 @@ const MovieCard = () => {
             parsedReviews.reviews.push(newReview);
             localStorage.setItem('reviews', JSON.stringify(parsedReviews));
 
-            setNewReviewText('');
+            console.log("Добавлен новый отзыв: ", newReview);
+
         } catch (error) {
             console.error(error.message);
         }
+
+
     };
 
     const toggleFavorite = () => {
@@ -119,7 +108,6 @@ const MovieCard = () => {
     if (!movie) {
         return <div>Фильм не найден</div>;
     }
-
     return (
         <div className="movie">
             <div className="movie-details">
@@ -127,46 +115,30 @@ const MovieCard = () => {
                 <h4>Режиссер: {movie.directors.join(', ')}, жанр: {movie.genres.join(', ')}</h4>
                 <div className="movie-container">
                     <img src={movie.photos[0]} alt={movie.title}/>
-                    <h3>{movie.description}</h3>
-                    <div className="favorite-button">
-                        <button onClick={toggleFavorite}>
-                            {isFavorite ? <img src={Heart} alt="Remove from favorites"/> :
-                                <img src={HeartNotLike} alt="Add to favorites"/>}
-                        </button>
+                    <div className="movie-container__text">
+                        <h3>{movie.description}</h3>
+                        <div className="favorite-button">
+                            <button onClick={toggleFavorite}>
+                                {isFavorite ? <img src={Heart} alt="Remove from favorites"/> :
+                                    <img src={HeartNotLike} alt="Add to favorites"/>}
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div className="movie-reviews">
-                <h1> Обсуждения: </h1>
-
-                {reviews.length > 0 ? reviews.map((review, index) => (
-                    <div key={index} className="review-container">
-                        <img src={review.userInfo[2]} alt={`${review.userInfo[0]} ${review.userInfo[1]}`}/>
-                        <div className="review-container__data">
-                            <h5>{`${review.userInfo[0]} ${review.userInfo[1]}`}</h5>
-                            <p>{review.reviewText}</p>
-                        </div>
-                    </div>
-                )) : <p className="user-not-review">Еще никто не написал комментарий, будь первым!</p>}
-
-                {isAuthenticated && (
-                    <div className="movie-reviews__add">
-                        <textarea
-                            value={newReviewText}
-                            onChange={handleReviewChange}
-                            placeholder="Написать комментарий"
-                        />
-                        <button onClick={handleAddReview}>Отправить</button>
-                    </div>
-                )}
-            </div>
+            <MovieReviews
+                reviews={reviews}
+                isAuthenticated={isAuthenticated}
+                movieId={id}
+                onAddReview={handleAddReview}
+            />
 
             <div className="background-img">
                 <img src={backgroundImg} alt="Background"/>
             </div>
         </div>
     );
-}
+};
 
-export default React.memo(MovieCard);
+export default MovieCard;

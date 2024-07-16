@@ -1,9 +1,10 @@
+import { Link } from "react-router-dom";
 import "./Button.css"
 
 function Button({style, data}) {
     return (
       <div className="Button" style={{maxWidth: `${style}%`}}>
-         <a>{data}</a>
+         <Link to='/filterMovies'>{data}</Link>
       </div>
     );
   }

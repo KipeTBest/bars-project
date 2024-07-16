@@ -8,6 +8,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 36px;
     margin-top: 165px;
+    display: inline-block;
 }
 
 .profile-form {
@@ -15,7 +16,7 @@
 }
 
 .profile-form__user-data {
-    margin-left: 350px;
+    margin-left: 500px;
     display: flex;
     flex-direction: column;
 }
@@ -64,6 +65,10 @@ textarea {
     align-items: flex-start;
 }
 
+.profile-edit__save button[type="submit"]{
+
+}
+
 .profile-edit__save {
     position: relative;
     display: inline-block;
@@ -74,14 +79,18 @@ textarea {
     height: 80px;
     width: 323px;
 
+    margin-top: 10px;
+    margin-left: 100px;
+
+
+    margin-bottom: 150px;
+
     background-color: #0D2536;
     padding: 10px 10px;
     box-sizing: border-box;
     border: none;
     transition: background-color 0.2s;
-    margin-bottom: 229px;
 }
-
 
 .profile-edit__save:hover {
     opacity: 0.3;
@@ -104,11 +113,11 @@ textarea {
 }
 
 .profile-edit__photo {
-    margin-top: -25px;
-    margin-bottom: 10px;
+    display: flex;
     position: relative;
     height: 80px;
     width: 350px;
+    margin-left: 100px;
 }
 
 .profile-edit__photo-label {
@@ -125,6 +134,7 @@ textarea {
     box-sizing: border-box;
     border: none;
     transition: background-color 0.2s;
+
 }
 
 .profile-edit__photo input[type="file"] {

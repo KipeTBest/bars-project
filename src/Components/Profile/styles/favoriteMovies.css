@@ -75,12 +75,18 @@
     z-index: 1;
 }
 
-.errorInFavorites {
+.text-info-favorite-movies {
     padding: 50px;
-    background-color: white;
+    color: white;
     font-size: 48px;
     font-family: 'Inter', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media(max-width:1700px) {
+    .movies-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }

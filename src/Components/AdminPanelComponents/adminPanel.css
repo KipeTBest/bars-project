@@ -1,25 +1,26 @@
 .admin-panel__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     color: #BCF8F7;
-    font-size: 64px;
-    line-height: 96px;
+    font-size: 3vw;
     font-family: 'Jura', sans-serif;
-    font-weight: 400;
-    text-align: left;
-    margin-left: 111px;
-    margin-top: 333px;
+    margin-top: 10%;
+    margin-left: 5%;
     text-shadow: 0 0 4px #3576F8;
 }
 
 .admin-panel__form-container {
-    text-align: left;
-    margin-left: 111px;
-    margin-top: 0; /*delete this, can't do like in mockup*/
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-group {
     color: #FFFFFF;
-    font-family: Russo One, sans-serif;
-    font-size: 36px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.6vw;
     font-weight: 400;
     line-height: 54px;
     margin-bottom: 20px; /*own*/
@@ -31,15 +32,18 @@ label {
     padding-right: 20px; /*own*/
 }
 
-input[type=text],
+.form-input,
 textarea {
-    width: 653px;
-    height: 65px;
+    width: 32vw;
+    height: 3vw;
     background-color: #D9D9D9;
-    color: black;
+}
+.form-group-description {
+    display: flex;
 }
 
 .description {
+    width: 56.4vw;
     background-color: #D9D9D9;
     color: black;
 }
@@ -55,42 +59,33 @@ textarea {
 
 .form-row .right label {
     display: block;
-    width: 371px;
-    height: 67px;
+    width: 18vw;
     background: linear-gradient(90deg, #1D283D 0%, #4D6DA3 51%);
     color: #FFFFFF;
-    text-align: justify-all; /*TODO change text-align*/
+    text-align: justify-all;
     font-family: Inter, sans-serif;
-    margin-left: 64px; /*0.5 miss*/
-    margin-top: 20px;
+    margin-left: 6.5vw;
+    margin-top: 1vw;
 }
 
 .form-row .right img {
     display: block;
-    width: 239px;
-    height: 302px;
-    max-width: 239px;
-    max-height: 302px;
+    width: 13vw;
+    height: 14vw;
+    max-width: 14vw;
+    max-height: 14vw;
     background-color: #D9D9D9;
-    margin-left: 129px; /*0.5 miss*/
-}
-
-textarea {
-    width: 1151px;
-    height: 271px;
-    margin-right: 301px;
-    background-color: #D9D9D9;
+    margin-left: 9vw;
 }
 
 .form-button {
-    margin-left: 1102px; /*own*/
-    width: 371px;
-    height: 67px;
+    margin-left: 58vw;
+    width: 16vw;
     background: linear-gradient(90deg, #1D283D 0%, #4D6DA3 51%);
     border: none;
     outline: none;
     font-family: Inter, sans-serif;
-    font-size: 36px;
+    font-size: 2vw;
     font-weight: 400;
     line-height: 54px;
     text-align: center;
@@ -98,37 +93,35 @@ textarea {
 }
 
 .admin-panel__database {
-    width: 1507px;
-    margin-left: 112px;
-    padding-bottom: 100px; /*own*/
+    margin-left: 5vw;
+    padding-bottom: 8vw;
 }
 
 .admin-panel__database__text {
     font-family: Jura, sans-serif;
-    font-size: 64px;
+    font-size: 3vw;
     font-weight: 400;
     line-height: 96px;
     text-align: left;
     color: #BCF8F7;
     text-shadow: 0 0 4px #3576F8;
-    margin-top: 50px; /*own*/
+    margin-top: 4vw;
 }
 
 .admin-panel__database table {
-    width: 1456px;
     border-collapse: collapse;
-    margin-left: 51px;
+    margin-left: 2vw;
 }
 
 .admin-panel__database th, td {
-    border: 1px solid #000000;
+    border: 0.1vw solid #000000;
     text-align: left;
-    padding: 4px; /*own*/
+    padding: 0.2vw;
     font-family: Inter, sans-serif;
-    font-size: 36px;
+    font-size: 1.7vw;
     font-weight: 400;
     line-height: 54px;
-    max-width: 320px; /*own*/
+    max-width: 19vw;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -138,10 +131,6 @@ textarea {
     background-color: #D9D9D9;
 }
 
-.admin-panel__database td {
-    width: 109px; /*own +-*/
-    text-align: center;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
+.tr-button {
+    cursor: pointer;
 }

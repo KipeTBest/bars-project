@@ -10,7 +10,7 @@ const HeaderProfile = () => {
     return (
         <div className="header-profile">
             <ul className="header-profile__list">
-                <li className="header-profile-list__item">
+                <li className="header-profile__list-item">
                     <NavLink
                         to="/profile"
                         className={({isActive}) =>
@@ -20,7 +20,7 @@ const HeaderProfile = () => {
                         Профиль
                     </NavLink>
                 </li>
-                <li className="header-profile-list__item">
+                <li className="header-profile__list-item">
                     <NavLink
                         to="/favorite"
                         className={({isActive}) =>
