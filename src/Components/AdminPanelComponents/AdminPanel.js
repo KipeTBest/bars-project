@@ -162,7 +162,7 @@ const AdminPanel = () => {
                         <th>Режиссер:</th>
                         <th>Описание:</th>
                         <th></th>
-                        {/* <th></th> */}
+                        <th></th>
                     </tr>
                     </thead>
                     <tbody>
@@ -174,7 +174,7 @@ const AdminPanel = () => {
                             <td>{movie.directors.join(', ')}</td>
                             <td>{movie.description}</td>
                             <td className='tr-button' onClick={() => handleDelete(index)}>❌</td>
-                            {/* <td className='tr-button change-info-movies'>🖋</td> */}
+                            <td className='tr-button change-info-movies' onClick={() => handleEdit(index)} >🖋</td>
                         </tr>
                     ))}
                     </tbody>
