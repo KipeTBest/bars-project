@@ -173,8 +173,8 @@ const AdminPanel = () => {
                             <td>{movie.genres.join(', ')}</td>
                             <td>{movie.directors.join(', ')}</td>
                             <td>{movie.description}</td>
-                            <td className='tr-button' onClick={() => handleDelete(index)}>❌</td>
-                            <td className='tr-button change-info-movies' onClick={() => handleEdit(index)} >🖋</td>
+                            <td className='tr-button' onClick={() => handleDelete(movie.id)}>❌</td>
+                            <td className='tr-button change-info-movies' onClick={() => handleEdit(movie.id)} >🖋</td>
                         </tr>
                     ))}
                     </tbody>

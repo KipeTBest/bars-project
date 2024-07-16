@@ -15,7 +15,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .form-group {
@@ -24,8 +23,7 @@
     font-size: 1.6vw;
     font-weight: 400;
     line-height: 54px;
-    margin-bottom: 20px; /*own*/
-
+    margin-bottom: 20px;
 }
 
 label {
@@ -95,8 +93,8 @@ textarea {
 }
 
 .admin-panel__database {
+    margin-left: 10px;
     padding-bottom: 8vw;
-    margin-right: 100px;
 }
 
 .admin-panel__database__text {
@@ -113,7 +111,6 @@ textarea {
 .admin-panel__database table {
     border-collapse: collapse;
     margin-left: 2vw;
-
 }
 
 .admin-panel__database th, td {
